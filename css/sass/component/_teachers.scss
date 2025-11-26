@@ -1,0 +1,218 @@
+.teachers {
+  position: relative;
+  background-color: lighten($color: $setting_primary_color, $amount: 45%);
+  padding-bottom: 44px;
+}
+.teachers-cont {
+  padding: 0 20px 40px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  background-color: #fff;
+  position: relative;
+  @include xs {
+    padding: 0 15px 20px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -20px;
+    width: 20px;
+    height: 40px;
+    background-color: transparent;
+    border-top-right-radius: 24px;
+    box-shadow: 10px -10px 0 10px #fff;
+    @include sm {
+      top: 5px;
+    }
+    @include xs {
+      top: 0px;
+      border-top-right-radius: 18px;
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -20px;
+    width: 20px;
+    height: 40px;
+    background-color: transparent;
+    border-top-left-radius: 24px;
+    box-shadow: -10px -10px 0 10px #fff;
+    @include sm {
+      top: 5px;
+    }
+    @include xs {
+      top: 0px;
+      border-top-left-radius: 18px;
+    }
+  }
+}
+.teachers-title {
+  font-size: 40px;
+  font-weight: $weight_bold;
+  color: #010101;
+  text-align: center;
+  margin-bottom: 94px;
+  text-align: center;
+  @include md {
+    margin-bottom: 40px;
+  }
+  @include sm {
+    font-size: 34px;
+    margin-bottom: 22px;
+  }
+  @include xs {
+    font-size: 24px;
+  }
+}
+
+.teacher-slide {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  transition: all 0.4s ease-in-out;
+  .teacher-img {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    .img-cover {
+      border-radius: 50%;
+      display: flex;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 40%;
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(50% 0%, 100% 38%, 100% 100%, 0 100%, 0% 38%);
+    background: rgba(255, 255, 255, 0.8);
+    // backdrop-filter: blur(4px);
+    // -webkit-backdrop-filter: blur(4px);
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+  }
+  .teacher-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    @include flexCenter;
+    flex-direction: column;
+    padding: 20px 0 16px;
+    @include xs {
+      padding: 10px 0 8px;
+    }
+    .name {
+      @include fontStyle(18px, $weight_bold, #001533);
+      transition: all 0.4s ease-in-out;
+      @include xs {
+        font-size: 14px;
+      }
+    }
+    .jop-desc {
+      color: darken($color: $setting_primary_color, $amount: 20%);
+      transition: all 0.4s ease-in-out;
+      @include xs {
+        font-size: 12px;
+      }
+    }
+  }
+  &:hover {
+    border-color: $setting_primary_color;
+    box-shadow: 0px 4px 12px 0px #0000001f;
+    &::after {
+      background-color: $setting_primary_color;
+    }
+    .teacher-info {
+      .name {
+        color: #fff;
+      }
+      .jop-desc {
+        color: #fff;
+      }
+    }
+  }
+}
+.teachers-btn {
+  @include flexCenter;
+  padding: 0 88px;
+  height: 48px;
+  @include fontStyle(16px, $weight_bold, #fff);
+  border-radius: 32px;
+  background-color: $setting_primary_color;
+  width: fit-content;
+  margin: auto;
+  margin-top: 54px;
+  border: 2px solid #1263dc;
+  transition: all 0.4s ease-in-out;
+  @include sm {
+    margin-top: 25px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: $setting_primary_color;
+    height: 48px;
+  }
+}
+.teachers-cont {
+  .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    display: none;
+    @include md {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $setting_primary_color;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 64px;
+    height: 64px;
+    background-color: $setting_primary_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 60%;
+    border: 2.67px solid $setting_primary_color;
+    &::after {
+      color: #fff;
+      font-size: 26px;
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    left: -80px;
+    &::after {
+      transform: translateX(-2px);
+    }
+  }
+  .swiper-button-next {
+    right: -80px;
+    &::after {
+      transform: translateX(2px);
+    }
+  }
+  .swiper-button-disabled {
+    opacity: 1 !important;
+    background-color: #fff;
+    &::after {
+      color: $setting_primary_color;
+    }
+  }
+}

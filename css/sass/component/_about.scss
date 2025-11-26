@@ -1,0 +1,249 @@
+.about {
+  padding: 140px 0 70px;
+  @include sm {
+    padding: 40px 0 20px;
+  }
+}
+.about-cont {
+  padding: 50px 45px;
+  border-radius: 48px;
+  border: 1px solid lighten($color: $setting_primary_color, $amount: 45%);
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: relative;
+  overflow: hidden;
+  @include md {
+    padding: 40px 25px;
+  }
+  @include sm {
+    border-radius: 30px;
+    gap: 30px;
+    padding: 30px 25px;
+  }
+  @include xs {
+    border-radius: 18px;
+    gap: 30px;
+    padding: 25px 20px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 105px;
+    background-color: lighten($color: $setting_primary_color, $amount: 45%);
+    z-index: -3;
+    @include sm {
+      height: 90px;
+    }
+    @include xs {
+      height: 60px;
+    }
+  }
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 104px;
+  @include md {
+    gap: 50px;
+    grid-template-columns: 7fr 5fr;
+  }
+  @include sm {
+    gap: 30px;
+  }
+  @include xs {
+    grid-template-columns: 1fr;
+  }
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      font-weight: $weight_bold;
+      font-size: 40px;
+      color: #010101;
+      margin-bottom: 32px;
+      @include sm {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+    }
+    .desc {
+      font-weight: $weight_regular;
+      font-size: 24px;
+      color: #343434;
+      margin-bottom: 20px;
+      @include md {
+        font-size: 20px;
+      }
+      @include sm {
+        font-size: 14px;
+        margin-bottom: 14px;
+      }
+    }
+    .about-btn {
+      font-weight: $weight_bold;
+      font-size: 16px;
+      color: $setting_primary_color;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 105px;
+      border: 2px solid $setting_primary_color;
+      border-radius: 32px;
+      width: fit-content;
+      transition: all 0.5s ease-in-out;
+      @include sm {
+        margin-top: 4px;
+        padding: 0 70px;
+      }
+      @include xs {
+        width: 100%;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $setting_primary_color;
+        border-color: lighten($color: $setting_primary_color, $amount: 45%);
+      }
+    }
+  }
+  .about-img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    position: relative;
+    .img-cover {
+      display: flex;
+      border-radius: 50%;
+    }
+    .after-img {
+      position: absolute;
+      bottom: 0;
+      inset-inline-start: 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      aspect-ratio: 1;
+      width: 98px;
+      border: 1px solid lighten($color: $setting_primary_color, $amount: 45%);
+      box-shadow: 0px 8px 12px 0px #0000001f;
+      @include xs {
+        width: 70px;
+      }
+    }
+  }
+}
+.about-expirince {
+  display: flex;
+  justify-content: center;
+  gap: 27px;
+  z-index: 3;
+  @include md {
+    gap: 15px;
+  }
+  @include sm {
+    gap: 10px;
+  }
+  @include xs {
+    flex-wrap: wrap;
+  }
+  .about-item {
+    width: calc(20% - 21.6px);
+    height: 100%;
+    aspect-ratio: 1;
+    border: 1px solid lighten($color: $setting_primary_color, $amount: 45%);
+    border-radius: 50%;
+    padding: 48px 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+    @include md {
+      width: calc(20% - 12px);
+    }
+    @include sm {
+      padding: 20px 14px;
+      width: calc(20% - 8px);
+    }
+    @include xs {
+      width: calc(33% - 8px);
+      padding: 10px;
+      gap: 0;
+    }
+    .item-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 23px;
+      transition: all 0.5s ease-in-out;
+      @include sm {
+        gap: 10px;
+      }
+
+      .num {
+        font-weight: $weight_bold;
+        font-size: 37px;
+        color: darken($color: $setting_primary_color, $amount: 30%);
+        transition: all 0.5s ease-in-out;
+        @include sm {
+          font-size: 26px;
+        }
+        @include xs {
+          font-size: 22px;
+        }
+      }
+      .las {
+        font-size: 37px;
+        color: $setting_secondary_color;
+        transition: all 0.5s ease-in-out;
+        @include sm {
+          font-size: 26px;
+        }
+        @include xs {
+          font-size: 22px;
+        }
+      }
+    }
+    .item-text {
+      font-weight: $weight_bold;
+      font-size: 20px;
+      color: #343434;
+      transition: all 0.5s ease-in-out;
+      text-align: center;
+      @include md {
+        font-size: 18px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+      @include xs {
+        font-size: 10px;
+      }
+    }
+    &:hover {
+      border-color: lighten($color: $setting_primary_color, $amount: 20%);
+      .item-row {
+        gap: 15px;
+        @include sm {
+          gap: 7px;
+        }
+      }
+      .num {
+        transform: scale(1.2) rotate(5deg);
+      }
+      .las {
+        transform: scale(1.2) rotate(5deg);
+      }
+      .item-text {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}

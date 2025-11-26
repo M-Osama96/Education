@@ -1,0 +1,286 @@
+.banner {
+  background-color: darken($color: $setting_primary_color, $amount: 40%);
+  width: 100%;
+  aspect-ratio: 1440/700;
+  overflow: hidden;
+  @include xs {
+    aspect-ratio: unset;
+  }
+}
+
+.banner-cont {
+  position: relative;
+  height: 100%;
+}
+.inner-banner {
+  position: relative;
+  height: 100%;
+  padding: 90px 55px 36px;
+  @include flexCenter;
+  gap: 65px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    darken($color: $setting_primary_color, $amount: 15%) 0%,
+    darken($color: $setting_primary_color, $amount: 35%) 100%
+  );
+  //   background: radial-gradient(50% 50% at 50% 50%, #003e99 0%, #001533 100%);
+  opacity: 0;
+  transition: all 2.5s ease-in-out;
+  @include sm {
+    gap: 0;
+  }
+  @include xs {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 20px;
+  }
+  .inView & {
+    opacity: 1;
+  }
+
+  .banner-svg {
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    height: 100%;
+    width: 56%;
+    transition: all 2.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+    @include xs {
+      width: 100%;
+    }
+    .inView & {
+      @include lg {
+        animation: DownUpSettler 2.5s ease-out forwards;
+      }
+      @include md {
+        transform: translateY(0);
+        top: 0;
+      }
+      opacity: 1;
+      z-index: 3;
+    }
+  }
+}
+@keyframes DownUpSettler {
+  0% {
+    transform: translateY(-20%); /* يبدأ نازل */
+  }
+  20% {
+    transform: translateY(30%); /* يطلع لفوق */
+  }
+  70% {
+    transform: translateY(-10%); /* ينزل لتحت شوية */
+  }
+  100% {
+    transform: translateY(0); /* يستقر */
+  }
+}
+.r-imgs-group {
+  display: flex;
+  flex-direction: column;
+  transition: all 2.5s ease;
+  transform: translate(0, -700px);
+  opacity: 0;
+  @include md {
+    transform: translate(-80px, -700px);
+  }
+  @include xs {
+    flex-direction: row;
+    transform: translate(0, -700px);
+    gap: 20px;
+    align-items: center;
+  }
+  .inView & {
+    @include lg {
+      animation: upDownSettle 2.5s ease-out forwards;
+    }
+    opacity: 1;
+    z-index: 3;
+    @include md {
+      transform: translate(-80px, 0);
+    }
+    @include xs {
+      transform: translate(0, 0);
+    }
+  }
+  .banner-img {
+    border: 4px solid #ffffff;
+    overflow: hidden;
+    transform: rotate(25deg);
+    .img-cover {
+      display: flex;
+    }
+    &:first-child {
+      border-radius: 50%;
+      width: 176px;
+      aspect-ratio: 1;
+      transform: translate(100px, -70px) rotate(18deg);
+      @include md {
+        width: 160px;
+        transform: translate(80px, -50px) rotate(18deg);
+      }
+      @include sm {
+        width: 120px;
+        transform: translate(100px, -40px) rotate(18deg);
+      }
+      @include xs {
+        transform: translate(0) rotate(18deg);
+        width: 100px;
+        height: 100px;
+      }
+    }
+    &:last-child {
+      width: 243px;
+      aspect-ratio: 243/224;
+      border-radius: 16px;
+      transform: translate(50px, -20px) rotate(20deg);
+      @include md {
+        width: 200px;
+      }
+      @include sm {
+        width: 160px;
+        transform: translate(90px, -20px) rotate(20deg);
+      }
+      @include xs {
+        transform: translate(0) rotate(18deg);
+        width: 120px;
+      }
+    }
+  }
+}
+.l-imgs-group {
+  display: flex;
+  flex-direction: column;
+  transition: all 2.5s ease;
+  transform: translate(0, -700px);
+  opacity: 0;
+  @include md {
+    transform: translate(80px, -700px);
+  }
+  @include xs {
+    flex-direction: row;
+    transform: translate(0, -700px);
+    gap: 20px;
+    align-items: center;
+  }
+  .inView & {
+    @include lg {
+      animation: upDownSettle 2.5s ease-out forwards;
+    }
+    opacity: 1;
+    z-index: 3;
+    @include md {
+      transform: translate(80px, 0);
+    }
+    @include xs {
+      transform: translate(0, 0);
+    }
+  }
+  .banner-img {
+    border: 4px solid #ffffff;
+    overflow: hidden;
+    transform: rotate(25deg);
+    .img-cover {
+      display: flex;
+    }
+    &:first-child {
+      width: 243px;
+      aspect-ratio: 243/224;
+      border-radius: 16px;
+      transform: translate(-100px, 0px) rotate(-20deg);
+      @include md {
+        width: 200px;
+      }
+      @include sm {
+        width: 160px;
+        transform: translate(-110px, -25px) rotate(-20deg);
+      }
+      @include xs {
+        width: 120px;
+        transform: translate(0) rotate(-20deg);
+      }
+    }
+    &:last-child {
+      border-radius: 121px;
+      width: 243px;
+      aspect-ratio: 243/151;
+      transform: translate(-22px, 45px) rotate(-20deg);
+      @include md {
+        transform: translate(-22px, 25px) rotate(-20deg);
+        width: 220px;
+      }
+      @include sm {
+        width: 180px;
+        transform: translate(-75px, 0px) rotate(-20deg);
+      }
+      @include xs {
+        width: 140px;
+        transform: translate(0, 20px) rotate(-20deg);
+      }
+    }
+  }
+}
+.banner-center {
+  @include flexCenter;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  max-width: 420px;
+  transition: all 2.5s ease;
+  transform: translateY(-700px);
+  opacity: 0;
+  // z-index: -100;
+  .inView & {
+    @include lg {
+      animation: upDownSettle 2.5s ease-out forwards;
+    }
+    @include md {
+      transform: translateY(0);
+    }
+    opacity: 1;
+    z-index: 3;
+  }
+  .title {
+    @include fontStyle(40px, $weight_bold, #fff);
+    @include sm {
+      font-size: 28px;
+    }
+  }
+  .desc {
+    @include fontStyle(18px, $weight_regular, #f0f0f0);
+    @include sm {
+      font-size: 16px;
+    }
+  }
+  .banner-btn {
+    background-color: #fff;
+    color: $setting_primary_color;
+    padding: 0 76px;
+    height: 48px;
+    @include flexCenter;
+    border-radius: 32px;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: $weight_semibold;
+    z-index: 5;
+    @include sm {
+      padding: 0 50px;
+    }
+  }
+}
+@keyframes upDownSettle {
+  0% {
+    transform: translateY(200px); /* يبدأ نازل */
+  }
+  20% {
+    transform: translateY(-100px); /* يطلع لفوق */
+  }
+  70% {
+    transform: translateY(50px); /* ينزل لتحت شوية */
+  }
+  100% {
+    transform: translateY(0); /* يستقر */
+  }
+}

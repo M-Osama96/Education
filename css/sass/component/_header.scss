@@ -1,0 +1,269 @@
+.main-header {
+}
+.header {
+  background-color: lighten($color: $setting_primary_color, $amount: 45%);
+  padding: 19px 35px 29px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 29px;
+  height: 88px;
+  @include md {
+    padding: 19px 15px 29px;
+    height: 74px;
+  }
+  @include sm {
+    justify-content: space-between;
+    padding: 14px 30px;
+    height: 65px;
+  }
+  @include xs {
+    padding: 14px 30px;
+    height: 53px;
+  }
+  .menu-btn {
+    display: none;
+    @include sm {
+      display: flex;
+      margin-inline-end: 10px;
+      z-index: 113;
+      font-size: 24px;
+      color: $setting_text_color;
+      transition: all 0.5s ease-in-out;
+      .active & {
+        color: #fff;
+        i {
+          &::before {
+            content: "\f00d";
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    height: 57px;
+    aspect-ratio: 192/57;
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
+
+    @include md {
+      height: 40px;
+    }
+    @include sm {
+      z-index: 103;
+    }
+    .img-contain {
+      z-index: 3;
+    }
+    .logo-bg {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      background-color: #fff;
+      width: calc(100% + 80px);
+      height: calc(100% + 18px);
+      left: -39px;
+      top: -13px;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+      @include md {
+        width: calc(100% + 40px);
+        left: -20px;
+      }
+    }
+    @include xs {
+      height: 32px;
+    }
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    inset-inline-start: -100vw;
+    width: 100vw;
+    background-color: lighten($color: $setting_primary_color, $amount: 30%);
+    opacity: 98%;
+    z-index: 101;
+    transition: all 0.5s ease-in-out;
+    @include sm {
+      display: flex;
+    }
+    .active & {
+      inset-inline-start: 0;
+    }
+  }
+  .main-nav {
+    &.second {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      @include md {
+        gap: 15px;
+      }
+      @include sm {
+        display: none;
+      }
+    }
+    @include sm {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 102;
+      inset-inline-start: 0;
+      inset-inline-start: -100vw;
+      padding: 120px 30px 40px;
+      transition: all 0.5s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-direction: column;
+      z-index: 104;
+      .active & {
+        inset-inline-start: 0;
+      }
+    }
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      @include md {
+        gap: 10px;
+      }
+      @include sm {
+        flex-direction: column;
+        gap: 25px;
+        li {
+          color: #fff;
+        }
+      }
+      li {
+        font-size: 16px;
+        font-weight: $weight_medium;
+        color: darken($color: $setting_primary_color, $amount: 30%);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $setting_primary_color;
+        }
+        @include md {
+          font-size: 14px;
+        }
+      }
+      &.lg {
+        @include sm {
+          display: none;
+        }
+      }
+      &.sm {
+        display: none;
+        @include sm {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 25px;
+          margin: 25px 0;
+        }
+      }
+    }
+  }
+
+  .lang-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    z-index: 96;
+    @include sm {
+      position: relative;
+      z-index: 116;
+    }
+    &.lg {
+      @include sm {
+        display: none;
+      }
+    }
+    &.sm {
+      display: none;
+      @include sm {
+        display: flex;
+      }
+    }
+
+    .lang-link {
+      text-decoration: underline;
+      color: $setting_primary_color;
+      line-height: 18px;
+      transition: all 0.3s ease-in-out;
+      .active & {
+        color: #fff;
+      }
+    }
+    i {
+      font-size: 20px;
+      color: $setting_primary_color;
+      transition: all 0.3s ease-in-out;
+      .active & {
+        color: #fff;
+      }
+    }
+  }
+}
+.lang-plus-menubtn {
+  display: none;
+  @include sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+}
+.sub-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $setting_primary_color;
+  color: #fff;
+  border-radius: 32px;
+  padding: 0 24px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: $weight_bold;
+  border: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    border: 2px solid #1263dc;
+    color: $setting_primary_color;
+    background-color: #fff;
+  }
+  &.lg {
+    @include sm {
+      display: none;
+    }
+  }
+  &.sm {
+    display: none;
+    @include sm {
+      display: flex;
+      padding: 0 44px;
+    }
+    @include xxs {
+      width: 100%;
+    }
+  }
+}
+.lg {
+  @include sm {
+    display: none;
+  }
+}
+.sm {
+  display: none;
+  @include sm {
+    display: unset;
+  }
+}

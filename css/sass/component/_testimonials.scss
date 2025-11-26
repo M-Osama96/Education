@@ -1,0 +1,372 @@
+@mixin center {
+  .testi-slide {
+    opacity: 1;
+    background-color: #fff;
+    position: relative;
+
+    border: 2px solid $setting_primary_color;
+    border-radius: 128px;
+    padding: 16px 16px 16px 32px;
+    width: fit-content;
+    @include lg {
+    }
+    .profile {
+      @include flexCenter;
+      gap: 8px;
+    }
+    .testi-img {
+      width: 64px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .testi-info {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 10px;
+      .name {
+        @include fontStyle(20px, $weight_bold, #000000);
+      }
+      .jop-desc {
+        @include fontStyle(16px, $weight_light, #535353);
+      }
+    }
+    .testi-text {
+      display: flex;
+
+      flex-direction: column;
+      gap: 12px;
+      padding: 47px 56px;
+      border-radius: 72px;
+      border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
+      background-color: lighten($color: $setting_primary_color, $amount: 50%);
+      transition: all 0.3s ease-in-out;
+      opacity: 1;
+      font-size: 18px;
+      color: #535353;
+      @include lg {
+        position: absolute;
+        left: calc(-100% - 20px);
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+@mixin top-bottom {
+  .testi-slide {
+    opacity: 0.6;
+    position: relative;
+    @include flexCenter;
+    border: none;
+    border-radius: 128px;
+    gap: 8px;
+    padding: 16px 16px 16px 32px;
+    width: fit-content;
+    .profile {
+      @include flexCenter;
+      gap: 8px;
+    }
+    .testi-img {
+      width: 64px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .testi-info {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 10px;
+      .name {
+        @include fontStyle(20px, $weight_bold, #000000);
+      }
+      .jop-desc {
+        @include fontStyle(16px, $weight_light, #535353);
+      }
+    }
+    .testi-text {
+      display: none;
+      @include md {
+        display: flex;
+      }
+    }
+  }
+}
+@mixin default {
+  .testi-slide {
+    opacity: 0.4;
+    @include flexCenter;
+    border-radius: 128px;
+    border: none;
+    gap: 8px;
+    padding: 16px 16px 16px 32px;
+    width: fit-content;
+    @include md {
+      opacity: 1;
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+    .profile {
+      @include flexCenter;
+      gap: 8px;
+    }
+    .testi-img {
+      width: 64px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      @include sm {
+        width: 54px;
+      }
+    }
+    .testi-info {
+      @include flexCenter;
+      flex-direction: column;
+      gap: 10px;
+      .name {
+        @include fontStyle(20px, $weight_bold, #000000);
+        @include sm {
+          font-size: 16px;
+        }
+      }
+      .jop-desc {
+        @include fontStyle(16px, $weight_light, #535353);
+        @include sm {
+          font-size: 13px;
+        }
+      }
+    }
+    .testi-text {
+      display: none;
+      @include md {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 30px;
+        border-radius: 48px;
+        border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
+        background-color: lighten($color: $setting_primary_color, $amount: 50%);
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        font-size: 14px;
+        color: #535353;
+        @include sm {
+          font-size: 12px;
+          border-radius: 24px;
+          gap: 6px;
+          padding: 15px 20px;
+        }
+      }
+      .inner-testi-svg {
+        @include sm {
+          width: 32px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  margin: 140px 0;
+  @include sm {
+    margin: 40px 0;
+  }
+}
+.testimonials-cont {
+  padding-top: 55px;
+  border: 1px solid lighten($color: $setting_primary_color, $amount: 50%);
+  border-radius: 48px;
+  box-shadow: 0px 16px 48px 0px #0000000a;
+  @include md {
+    padding: 55px 20px 40px;
+  }
+  @include sm {
+    border-radius: 28px;
+  }
+  @include xs {
+    padding: 20px;
+    border-radius: 20px;
+  }
+}
+.testimonials-header {
+  @include flexCenter(center, space-between);
+  padding: 0 80px;
+  margin-bottom: 40px;
+  @include md {
+    padding: 0;
+  }
+  @include xs {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .testi-title {
+    @include fontStyle(40px, $weight_bold, #010101);
+    @include sm {
+      font-size: 34px;
+    }
+  }
+}
+.testi-btn {
+  @include flexCenter;
+  padding: 0 42px;
+  height: 48px;
+  @include fontStyle(16px, $weight_bold, #fff);
+  border-radius: 32px;
+  background-color: $setting_primary_color;
+  width: fit-content;
+  border: 2px solid #1263dc;
+  transition: all 0.4s ease-in-out;
+  @include xs {
+    padding: 0 30px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: $setting_primary_color;
+    height: 48px;
+  }
+  &.lg {
+    @include xs {
+      display: none;
+    }
+  }
+  &.xs {
+    display: none;
+    @include xs {
+      display: flex;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+.testimonials-flex {
+  display: flex;
+  overflow: hidden;
+  gap: 21px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .testi-curve {
+    position: absolute;
+    left: 144px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include md {
+      display: none;
+      gap: 0;
+    }
+  }
+  .swiper {
+    overflow: visible;
+    @include md {
+      overflow: hidden;
+    }
+  }
+}
+.testimonials-Swiper {
+  width: 39.5%;
+  height: 612px;
+  position: relative;
+  @include md {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-pagination {
+    display: none;
+    @include md {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  .swiper-slide-active {
+    @include lg {
+      transform: translate(-35px, 20px);
+    }
+  }
+  .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+    @include lg {
+      transform: translate(-35px, -20px);
+    }
+  }
+
+  .swiper-slide {
+    transition: all 0.3s ease-in-out;
+    @include default;
+  }
+  .swiper-slide-next + .swiper-slide {
+    transform: translateX(-145px);
+
+    transition: all 0.3s ease-in-out;
+    @include lg {
+      @include center;
+    }
+  }
+  .swiper-slide-next,
+  .swiper-slide-next + .swiper-slide + .swiper-slide {
+    @include lg {
+      transform: translateX(-120px);
+    }
+    transition: all 0.3s ease-in-out;
+    @include lg {
+      @include top-bottom;
+    }
+  }
+}
+
+.testimonials-info {
+  width: 60.4%;
+  height: 612px;
+  position: relative;
+  @include md {
+    display: none;
+  }
+  .swiper-btn {
+    @include flexCenter;
+    gap: 42px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 42px;
+      height: 42px;
+      background-color: $setting_primary_color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 2.67px solid $setting_primary_color;
+      position: relative;
+      &::after {
+        color: #fff;
+        font-size: 16px;
+      }
+      @include md {
+        display: none;
+      }
+    }
+    .swiper-button-prev {
+      &::after {
+        // transform: translateX(-2px);
+      }
+    }
+    .swiper-button-next {
+      &::after {
+        // transform: translateX(2px);
+      }
+    }
+    .swiper-button-disabled {
+      //   opacity: 1 !important;
+      background-color: #fff;
+      &::after {
+        color: $setting_primary_color;
+      }
+    }
+  }
+}

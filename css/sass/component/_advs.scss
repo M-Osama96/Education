@@ -1,0 +1,258 @@
+.advs {
+  margin: 70px 0;
+  background: radial-gradient(
+    50% 45.64% at 50% 45.64%,
+    #003e99 0%,
+    #001533 100%
+  );
+  color: #fff;
+  padding: 50px 0 108px;
+  z-index: 2;
+  @include sm {
+    margin: 20px 0;
+    padding: 30px 0 60px;
+  }
+  @include xs {
+    padding: 15px 0 40px;
+  }
+}
+.advs-cont {
+  gap: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include sm {
+    gap: 50px;
+  }
+  @include xs {
+    gap: 30px;
+  }
+}
+.advs-header {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  @include sm {
+    gap: 16px;
+  }
+  @include xs {
+    gap: 4px;
+    max-width: 200px;
+  }
+  .bg {
+    position: absolute;
+    left: -50px;
+    bottom: -25px;
+    width: calc(100% + 100px);
+    height: calc(100% + 100px);
+    background-color: #fff;
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+    z-index: 1;
+    @include md {
+      width: calc(100% + 40px);
+      left: -20px;
+    }
+    @include sm {
+      height: calc(100% + 60px);
+    }
+    @include xs {
+      left: -10px;
+      bottom: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 25px);
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 25px;
+      left: -50px;
+      width: 50px;
+      height: 96px;
+      background-color: transparent;
+      border-top-right-radius: 48px;
+      box-shadow: 20px -20px 0 10px #fff;
+      @include sm {
+        top: 5px;
+      }
+      @include xs {
+        top: 0px;
+        border-top-right-radius: 18px;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: 25px;
+      right: -96px;
+      width: 96px;
+      height: 96px;
+      background-color: transparent;
+      border-top-left-radius: 48px;
+      box-shadow: -20px -20px 0 0px #fff;
+      @include sm {
+        top: 5px;
+      }
+      @include xs {
+        top: 0px;
+        border-top-left-radius: 18px;
+      }
+    }
+  }
+  .title {
+    font-size: 40px;
+    font-weight: $weight_bold;
+    z-index: 2;
+    color: #010101;
+    @include sm {
+      font-size: 28px;
+    }
+    @include xs {
+      font-size: 26px;
+    }
+  }
+  .desc {
+    font-size: 18px;
+    font-weight: $weight_regular;
+    max-width: 412px;
+    text-align: center;
+    z-index: 2;
+    color: #535353;
+    @include sm {
+      font-size: 16px;
+      max-width: 320px;
+    }
+    @include xs {
+      font-size: 14px;
+    }
+  }
+}
+.advs-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include sm {
+    gap: 15px;
+  }
+  @include xs {
+    gap: 10px;
+  }
+}
+
+.advs-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(25% - 15px);
+  @include sm {
+    width: calc(33.3% - 10px);
+  }
+  @include xs {
+    width: calc(50% - 5px);
+  }
+  .advs-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 56px;
+    margin-bottom: -20px;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    @include xs {
+      width: 45px;
+      margin-bottom: -15px;
+    }
+    .las {
+      color: $setting_secondary_color;
+      font-size: 28px;
+      transition: all 0.5s ease-in-out;
+      @include xs {
+        font-size: 22px;
+      }
+    }
+  }
+  .advs-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    background-color: darken($color: $setting_primary_color, $amount: 20%);
+    padding: 44px 24px 24px;
+    border-radius: 16px;
+    border: 1.15px solid darken($color: $setting_primary_color, $amount: 15%);
+    transition: all 0.5s ease-in-out;
+    @include md {
+      padding: 34px 20px 20px;
+    }
+    @include xs {
+      padding: 25px 6px 10px;
+      border-radius: 10px;
+      gap: 4px;
+    }
+    .item-title {
+      font-size: 20px;
+      font-weight: $weight_bold;
+      @include md {
+        font-size: 18px;
+        text-align: center;
+      }
+      @include xs {
+        font-size: 14px;
+      }
+    }
+    .item-desc {
+      font-size: 16px;
+      font-weight: $weight_light;
+      color: #f0f0f0;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+      @include md {
+        font-size: 15px;
+      }
+      @include xs {
+        font-size: 11px;
+      }
+    }
+  }
+  &:hover {
+    .advs-icon {
+      transform: scale(1.3);
+      @include xs {
+        transform: scale(1.1);
+      }
+    }
+    .las {
+      transform: scale(1.2) rotate(5deg);
+      @include xs {
+        transform: scale(1.1) rotate(8deg);
+      }
+    }
+    .advs-text {
+      background: linear-gradient(
+        180deg,
+        rgba(3, 44, 106, 0.2) -9%,
+        #032c6a 100%
+      );
+      border-color: #fff;
+    }
+    .item-desc {
+      transform: translateY(8px);
+      @include xs {
+        transform: translateY(4px);
+      }
+    }
+  }
+}

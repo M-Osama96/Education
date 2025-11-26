@@ -1,0 +1,202 @@
+.departments {
+  padding: 170px 0 117px;
+  @include sm {
+    padding: 20px 0 20px;
+  }
+}
+.departments-cont {
+  .departments-title {
+    font-size: 40px;
+    font-weight: $weight_bold;
+    color: #010101;
+    text-align: center;
+    margin-bottom: 53px;
+    @include xs {
+      margin-bottom: 35px;
+      font-size: 26px;
+    }
+  }
+}
+.departments-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 19px;
+  @include md {
+    row-gap: 20px;
+    column-gap: 18px;
+  }
+  @include sm {
+    row-gap: 19px;
+    column-gap: 19px;
+  }
+  @include xs {
+    row-gap: 20px;
+    column-gap: 16px;
+  }
+}
+.departments-item {
+  width: calc(25% - 16px);
+  border: 1px solid #d9d9d9;
+  border-radius: 24px;
+  padding: 22px 8px 8px;
+  position: relative;
+  @include md {
+    width: calc(25% - 18px);
+  }
+  @include sm {
+    width: calc(50% - 11px);
+  }
+  @include xs {
+    width: calc(50% - 8px);
+    padding: 13px 4px 4px;
+    border-radius: 14px;
+  }
+  .item-title {
+    transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    font-weight: $weight_bold;
+    color: darken($color: $setting_primary_color, $amount: 30%);
+    margin-bottom: 16px;
+    @include md {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 13px;
+      max-width: 72%;
+    }
+  }
+  .item-img {
+    border-radius: 16px;
+    aspect-ratio: 254/224;
+    overflow: hidden;
+    @include xs {
+      border-radius: 6px;
+    }
+    .img-cover {
+      display: flex;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  .icon-box {
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    width: 55px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: -10px -10px 0 0px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    @include xs {
+      width: 40px;
+    }
+    .icon {
+      transition: all 0.4s ease-in-out;
+      background-color: lighten($color: $setting_primary_color, $amount: 45%);
+      width: 48px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $setting_primary_color;
+      @include xs {
+        width: 35px;
+      }
+      .las {
+        transition: all 0.4s ease-in-out;
+        font-size: 20px;
+        color: $setting_primary_color;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -0.5px;
+      right: -44px;
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border-top-left-radius: 18px;
+      box-shadow: -13px -50px 0 13px #fff;
+      border-top: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+      @include sm {
+        box-shadow: -24px -21px 0 -3px #fff;
+        height: 30px;
+        top: -1px;
+        width: 43px;
+        right: -47px;
+      }
+      @include xs {
+        background-color: transparent;
+        box-shadow: -23px -21px 0 -6px white;
+        height: 30px;
+        top: -1px;
+        width: 43px;
+        right: -47px;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -55.5px;
+      left: -1px;
+      width: 34px;
+      height: 55px;
+      background-color: transparent;
+      border-top-left-radius: 18px;
+      box-shadow: -22px -26px 0 -7px #fff;
+      border-top: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+      @include xs {
+        bottom: -55px;
+        left: -0.5px;
+        width: 34px;
+        height: 55px;
+        box-shadow: -22px -26px 0 -10px #fff;
+      }
+    }
+    .radius {
+      position: absolute;
+      width: 37px;
+      aspect-ratio: 1;
+      bottom: -1px;
+      right: -5px;
+      border-bottom-right-radius: 18px;
+      border-right: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      background-color: transparent;
+      z-index: 11;
+      @include xs {
+        width: 28px;
+        bottom: -0.5px;
+        border-bottom-right-radius: 14px;
+      }
+    }
+  }
+  &:hover {
+    .item-title {
+      transform: translateX(-5px);
+      color: $setting_primary_color;
+    }
+    .img-cover {
+      transform: scaleX(1.1);
+    }
+    .icon {
+      background-color: $setting_primary_color;
+      transform: translateX(-5px);
+    }
+    .las {
+      color: #fff !important;
+      transform: rotate(30deg);
+    }
+  }
+}

@@ -11,6 +11,11 @@
   border-radius: 48px;
   border: 1px solid lighten($color: $setting_primary_color, $amount: 50%);
   padding: 90px 64px 50px;
+  @include lg {
+    width: 100%;
+    aspect-ratio: 1140/724;
+    position: relative;
+  }
   @include sm {
     border-radius: 28px;
     padding: 40px 26px 25px;
@@ -94,6 +99,7 @@
   @include flexCenter;
   flex-direction: column;
   gap: 40px;
+
   @include sm {
     gap: 25px;
   }
@@ -114,6 +120,9 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     box-shadow: 4.6px 0px 4.6px 0px #0000000a;
+    @include lg {
+      position: absolute;
+    }
     &:hover {
       border: 2px solid lighten($color: $setting_primary_color, $amount: 30%);
       .img-cover {
@@ -126,25 +135,39 @@
   .client-img {
     @include lg {
       &:nth-of-type(1) {
-        transform: translate(33px, -266px);
+        // transform: translate(33px, -266px);
+        top: 396px;
+        left: 520px;
       }
       &:nth-of-type(2) {
-        transform: translate(62px, -116px);
+        // transform: translate(62px, -116px);
+        top: 370px;
+        left: 689px;
       }
       &:nth-of-type(3) {
-        transform: translate(50px, -26px);
+        // transform: translate(50px, -26px);
+        top: 370px;
+        left: 360px;
       }
       &:nth-of-type(4) {
-        transform: translate(0, 0);
+        // transform: translate(0, 0);
+        top: 277px;
+        left: 820px;
       }
       &:nth-of-type(5) {
-        transform: translate(-50px, -26px);
+        // transform: translate(-50px, -26px);
+        top: 277px;
+        left: 212px;
       }
       &:nth-of-type(6) {
-        transform: translate(-62px, -116px);
+        // transform: translate(-62px, -116px);
+        top: 132px;
+        left: 905px;
       }
       &:nth-of-type(7) {
-        transform: translate(-33px, -266px);
+        // transform: translate(-33px, -266px);
+        top: 132px;
+        left: 134px;
       }
     }
   }
@@ -153,25 +176,39 @@
   .client-img {
     @include lg {
       &:nth-of-type(1) {
-        transform: translate(85px, -216px);
+        // transform: translate(85px, -216px);
+        top: 556px;
+        left: 520px;
       }
       &:nth-of-type(2) {
-        transform: translate(67px, -93px);
+        // transform: translate(67px, -93px);
+        top: 530px;
+        left: 674px;
       }
       &:nth-of-type(3) {
-        transform: translate(34px, -26px);
+        // transform: translate(34px, -26px);
+        top: 522px;
+        left: 353px;
       }
       &:nth-of-type(4) {
-        transform: translate(0, 0);
+        // transform: translate(0, 0);
+        top: 463px;
+        left: 828px;
       }
       &:nth-of-type(5) {
-        transform: translate(-34px, -26px);
+        // transform: translate(-34px, -26px);
+        top: 447px;
+        left: 186px;
       }
       &:nth-of-type(6) {
-        transform: translate(-67px, -93px);
+        // transform: translate(-67px, -93px);
+        top: 344px;
+        left: 957px;
       }
       &:nth-of-type(7) {
-        transform: translate(-85px, -216px);
+        // transform: translate(-85px, -216px);
+        top: 336px;
+        left: 64px;
       }
     }
   }

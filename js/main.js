@@ -26,32 +26,26 @@ var swiper = new Swiper(".mySwiper", {
 var activitiesswiper = new Swiper(".activites-Swiper", {
   slidesPerView: "auto",
   spaceBetween: 20,
-  // initialSlide: 3,
-  // loop: true,
-  // centeredSlides: true,
+  loop: true,
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".activities-cont .swiper-button-next",
+    prevEl: ".activities-cont .swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".activities-cont .swiper-pagination",
     clickable: true,
   },
+
   breakpoints: {
-    // when window width is >= 0px
     0: {
       slidesPerView: 1,
       spaceBetween: 10,
     },
-
-    // when window width is >= 768px
     768: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-
-    // when window width is >= 1024px
     1024: {
       slidesPerView: 3,
       spaceBetween: 20,
@@ -62,13 +56,32 @@ var activitiesswiper = new Swiper(".activites-Swiper", {
     },
   },
 });
+
+// const accordionHeaders = document.querySelectorAll(
+//   ".activites-Swiper .swiper-slide"
+// );
+
+// accordionHeaders.forEach((header) => {
+//   header.addEventListener("click", () => {
+//     const openItem = document.querySelector(
+//       ".activites-Swiper .swiper-slide.active-a"
+//     );
+
+//     if (openItem && openItem !== header) {
+//       openItem.classList.remove("active-a");
+//     }
+
+//     header.classList.toggle("active-a");
+//   });
+// });
+
 var teachersSwiper = new Swiper(".teachers-Swiper", {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".teachers-cont .swiper-button-next",
+    prevEl: ".teachers-cont .swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".teachers-cont .swiper-pagination",
     clickable: true,
   },
   breakpoints: {
@@ -99,14 +112,14 @@ var teachersSwiper = new Swiper(".teachers-Swiper", {
 var swiper = new Swiper(".testimonials-Swiper", {
   slidesPerView: 5,
   spaceBetween: 20,
-  // loop: true,
+  loop: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".testimonials-cont .swiper-pagination",
     clickable: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".testimonials-cont .swiper-button-next",
+    prevEl: ".testimonials-cont .swiper-button-prev",
   },
   breakpoints: {
     // when window width is >= 0px

@@ -59,6 +59,8 @@
     }
     @include sm {
       height: calc(100% + 60px);
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
     }
     @include xs {
       left: -10px;
@@ -80,6 +82,7 @@
       box-shadow: 20px -20px 0 10px #fff;
       @include sm {
         top: 5px;
+        border-top-right-radius: 22px;
       }
       @include xs {
         top: 0px;
@@ -98,6 +101,7 @@
       box-shadow: -20px -20px 0 0px #fff;
       @include sm {
         top: 5px;
+        border-top-left-radius: 22px;
       }
       @include xs {
         top: 0px;

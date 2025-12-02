@@ -164,6 +164,11 @@
     @include md {
       @include center;
     }
+    &.active-a {
+      @include lg {
+        // @include center;
+      }
+    }
   }
 }
 .activity-item {

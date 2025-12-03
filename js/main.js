@@ -12,9 +12,9 @@ Fancybox.bind("[data-fancybox]", {
   //
 });
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".hero-cont .mySwiper", {
   pagination: {
-    el: ".swiper-pagination",
+    el: ".hero-cont .swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
       let num = String(index + 1).padStart(2, "0");
@@ -164,3 +164,55 @@ if (document.querySelectorAll(".banner-cont") !== null) {
   }
   fadeIn();
 }
+var swiper = new Swiper(".activities-archive-swiper", {
+  pagination: {
+    el: ".activities-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".activities-archive-cont .swiper-button-next",
+    prevEl: ".activities-archive-cont .swiper-button-prev",
+  },
+});
+
+const accordionHeaders = document.querySelectorAll(
+  ".activities-archive-slide .activity-item"
+);
+
+accordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    const openItem = document.querySelector(
+      ".activities-archive-slide .activity-item.active-ar"
+    );
+
+    if (openItem && openItem !== header) {
+      openItem.classList.remove("active-ar");
+    }
+
+    header.classList.toggle("active-ar");
+  });
+});
+const accordionHeaderss = document.querySelectorAll(
+  ".activities-archive-slide .activity-item"
+);
+
+accordionHeaderss.forEach((header) => {
+  header.addEventListener("click", () => {
+    // ✅ الشرط اللي بيحدد الرينج المطلوب
+    if (window.innerWidth >= 767 && window.innerWidth <= 991) {
+      const openItem = document.querySelector(
+        ".activities-archive-slide .activity-item.active-sm"
+      );
+
+      if (openItem && openItem !== header) {
+        openItem.classList.remove("active-sm");
+      }
+
+      header.classList.toggle("active-sm");
+    }
+  });
+});

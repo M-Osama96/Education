@@ -1,0 +1,237 @@
+@mixin center {
+  .activity-slide {
+    position: relative;
+    border-radius: 88px;
+    border: 4px solid lighten($color: $setting_primary_color, $amount: 40%);
+    overflow: hidden;
+    aspect-ratio: 367/448;
+    max-width: 367px;
+    @include md {
+      border-radius: 56px;
+    }
+
+    .img-cover {
+      display: flex;
+    }
+    .activity-banner {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 32px);
+      height: auto;
+      background: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      padding: 30px 37px;
+      border-radius: 176px;
+      border: 2px solid #ffffff;
+      @include md {
+        padding: 20px 25px;
+        gap: 8px;
+      }
+      .banner-title {
+        font-size: 20px;
+        font-weight: $weight_bold;
+        color: darken($color: $setting_primary_color, $amount: 30%);
+        margin: 0;
+        text-align: center;
+        transform: rotate(0);
+      }
+      .banner-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        .banner-desc {
+          font-size: 18px;
+          font-weight: $weight_regular;
+          color: #242424;
+          margin: 0;
+          text-align: center;
+          @include md {
+            font-size: 16px;
+          }
+        }
+        .banner-link {
+          font-size: 16px;
+          font-weight: $weight_semibold;
+          color: $setting_primary_color;
+          margin: 0;
+          text-align: center;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+@mixin normal {
+  .activity-slide {
+    position: relative;
+    border-radius: 88px;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    aspect-ratio: 173/372;
+    max-width: 173px;
+    .img-cover {
+      display: flex;
+    }
+    .activity-banner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 110px);
+      height: calc(100% - 130px);
+      background: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px 30px 15px;
+      border-radius: 48px;
+      border: none;
+      .banner-title {
+        font-size: 20px;
+        font-weight: $weight_bold;
+        color: darken($color: $setting_primary_color, $amount: 30%);
+        margin: 0;
+        text-align: center;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        @include md {
+          font-size: 16px;
+        }
+      }
+      .banner-text {
+        display: none;
+      }
+    }
+  }
+}
+.activities-archive {
+  padding: 88px 0 20px;
+  @include sm {
+    padding: 40px 0 0;
+  }
+}
+.activities-archive-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 20px;
+  flex-wrap: wrap;
+  .activity-item {
+    @include normal;
+    @include md {
+      width: calc(16.7% - 17px);
+    }
+    @include sm {
+      width: calc(25% - 15px);
+    }
+    @include xs {
+      width: calc(50% - 15px);
+    }
+    &.active-ar {
+      @include lg {
+        @include center;
+      }
+      @include md {
+        @include center;
+        width: calc(33.4% - 17px);
+      }
+      @include sm {
+        width: calc(25% - 15px);
+        @include normal;
+      }
+      @include xs {
+        width: calc(100% - 15px);
+        @include center;
+      }
+    }
+    &.active-sm {
+      @include sm {
+        @include center;
+        width: calc(50% - 15px);
+      }
+      @include xs {
+        width: calc(50% - 15px);
+        @include normal;
+      }
+    }
+  }
+}
+.swiper-footer {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 7px;
+  margin: 48px auto 0;
+  width: fit-content;
+  border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
+  padding: 8px 10px;
+  border-radius: 56px;
+  .swiper-pagination {
+    position: relative;
+    @include flexCenter;
+    gap: 7px;
+    bottom: 0;
+    .swiper-pagination-bullet {
+      background-color: transparent;
+      border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      @include flexCenter;
+      opacity: 1;
+      color: darken($color: $setting_primary_color, $amount: 30%);
+      margin: 0;
+      font-size: 16px;
+      &.swiper-pagination-bullet-active {
+        background-color: $setting_primary_color;
+        color: #fff;
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    width: auto;
+    left: unset;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    @include flexCenter;
+    background-color: $setting_primary_color;
+    color: #fff;
+  }
+  .swiper-button-next {
+    &::after {
+      font-size: 16px;
+      content: "\f30a";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      width: 35px;
+      height: 35px;
+      @include flexCenter;
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      font-size: 16px;
+      content: "\f30b";
+      font-family: "Line Awesome Free";
+      font-weight: 900;
+      width: 35px;
+      height: 35px;
+      @include flexCenter;
+    }
+  }
+}

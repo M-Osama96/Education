@@ -171,6 +171,7 @@
     }
   }
 }
+
 .activity-item {
   position: relative;
 
@@ -241,12 +242,13 @@
   //         }
   //       }
   //   }
-  .swiper-slide-next + .swiper-slide & {
+  .activites-Swiper .swiper-slide-next + .swiper-slide & {
     @include lg {
       @include center;
     }
   }
 }
+
 .activities-cont {
   .swiper-pagination {
     position: relative;

@@ -64,8 +64,8 @@
     grid-template-columns: 1fr;
   }
   .about-page & {
-    grid-template-columns: 500px 1fr;
-    gap: 60px;
+    grid-template-columns: 510px 1fr;
+    gap: 53px;
     @include md {
       grid-template-columns: 1fr 1fr;
       gap: 30px;
@@ -87,6 +87,9 @@
       @include sm {
         font-size: 32px;
         margin-bottom: 20px;
+      }
+      .about-page & {
+        margin-bottom: 16px;
       }
     }
     .desc {

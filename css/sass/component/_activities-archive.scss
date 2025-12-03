@@ -154,13 +154,9 @@
       }
     }
     &.active-sm {
-      @include sm {
+      @media (min-width: 767px) and (max-width: 991px) {
         @include center;
         width: calc(50% - 15px);
-      }
-      @include xs {
-        width: calc(50% - 15px);
-        @include normal;
       }
     }
   }

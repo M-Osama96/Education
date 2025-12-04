@@ -216,3 +216,33 @@ accordionHeaderss.forEach((header) => {
     }
   });
 });
+
+var thumbsSwiper = new Swiper(".thumbs-swiper", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      spaceBetween: 2,
+    },
+    768: {
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+});
+
+var mainSwiper = new Swiper(".activity-swiper", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".single-activity-cont .swiper-button-next",
+    prevEl: ".single-activity-cont .swiper-button-prev",
+  },
+
+  thumbs: {
+    swiper: thumbsSwiper,
+  },
+});

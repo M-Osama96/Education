@@ -29,6 +29,7 @@
       padding: 30px 37px;
       border-radius: 176px;
       border: 2px solid #ffffff;
+      z-index: 100;
       @include md {
         padding: 20px 25px;
         gap: 8px;
@@ -64,6 +65,8 @@
           margin: 0;
           text-align: center;
           text-decoration: underline;
+          position: relative;
+          z-index: 100;
         }
       }
     }
@@ -114,6 +117,9 @@
   padding: 80px 0;
   @include sm {
     padding: 40px 0;
+  }
+  .single-activity-page & {
+    background-color: #fff;
   }
 }
 .activities-cont {

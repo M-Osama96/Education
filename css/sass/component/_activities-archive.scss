@@ -29,6 +29,7 @@
       padding: 30px 37px;
       border-radius: 176px;
       border: 2px solid #ffffff;
+      z-index: 100;
       @include md {
         padding: 20px 25px;
         gap: 8px;

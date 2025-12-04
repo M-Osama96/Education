@@ -1,0 +1,254 @@
+.single-activity {
+  padding: 88px 0 60px;
+  @include sm {
+    padding: 40px 0 0px;
+  }
+}
+.single-activity-cont {
+  overflow: hidden;
+}
+.activity-swiper {
+  overflow: visible;
+  position: relative;
+  .activity-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darken($color: $setting_primary_color, $amount: 30%);
+    font-size: 40px;
+    font-weight: $weight-bold;
+    background-color: #fff;
+    z-index: 100;
+    padding: 15px 90px 20px;
+    width: max-content;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    @include sm {
+      font-size: 28px;
+      padding: 10px 60px 15px;
+    }
+    @include xs {
+      font-size: 18px;
+      padding: 5px 30px 10px;
+    }
+  }
+}
+.activity-slide {
+  width: 100%;
+  aspect-ratio: 1140/592;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  @include xs {
+    aspect-ratio: 1140/900;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba($setting_primary_color, 0) 0%,
+      rgba($setting_primary_color, 0.2) 100%
+    );
+  }
+  @include sm {
+    border-radius: 28px;
+  }
+  .img-cover {
+    display: flex;
+  }
+}
+.thumbs-swiper {
+  margin: -7% 128px 0;
+  @include sm {
+    margin: -7% 80px 0;
+  }
+  @include xs {
+    margin: -7% 10px 0;
+  }
+}
+.activity-slide-th {
+  //   width: 160px;
+  aspect-ratio: 160/137;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+  .swiper-slide-thumb-active & {
+    border: 4px solid $setting_secondary_color;
+    @include xs {
+      border-width: 2px;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #06234d80;
+  }
+}
+.single-activity {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 64px;
+    height: 64px;
+    background-color: $setting_primary_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: unset;
+    bottom: 0;
+    border: 2.67px solid $setting_primary_color;
+    z-index: 100;
+    &::after {
+      color: #fff;
+      font-size: 26px;
+    }
+    @include sm {
+      width: 50px;
+      height: 50px;
+      &::after {
+        font-size: 20px;
+      }
+    }
+
+    @include xs {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    transform: translate(-20px, 50%);
+    &::after {
+      transform: translateX(2px);
+    }
+    @include sm {
+      transform: translate(-10px, 50%);
+      &::after {
+        transform: translateX(1px);
+      }
+    }
+  }
+  .swiper-button-next {
+    transform: translate(20px, 50%);
+    &::after {
+      transform: translateX(-2px);
+    }
+    @include sm {
+      transform: translate(10px, 50%);
+      &::after {
+        transform: translateX(-1px);
+      }
+    }
+  }
+  .swiper-button-disabled {
+    opacity: 1;
+    background-color: #fff;
+    &::after {
+      color: $setting_primary_color;
+    }
+  }
+}
+.activity-info {
+  margin: 42px 128px 0 95px;
+  @include md {
+    margin: 42px 40px 0 40px;
+  }
+  @include sm {
+    margin: 20px 20px 0;
+  }
+  @include xs {
+    margin: 20px 0 0;
+  }
+}
+.activity-text {
+  @include flexCenter;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 34px;
+  margin-bottom: 32px;
+  @include sm {
+    margin-bottom: 25px;
+  }
+  @include xs {
+    padding-left: 0;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .activity-p {
+    @include fontStyle(24px, $weight-regular, #343434);
+    @include sm {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}
+.activity-advs {
+  .advs-title {
+    @include fontStyle(
+      40px,
+      $weight-bold,
+      darken($color: $setting_primary_color, $amount: 30%)
+    );
+    margin-bottom: 20px;
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @include xs {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  .advs-box {
+    @include flexCenter;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    @include xs {
+      gap: 2px;
+    }
+    .advs-line {
+      @include flexCenter;
+      gap: 12px;
+      @include sm {
+        gap: 8px;
+      }
+      @include xs {
+        gap: 5px;
+        align-items: start;
+      }
+      .las {
+        @include fontStyle(20px, $weight-regular, #34c759);
+        @include sm {
+          font-size: 16px;
+        }
+        @include xs {
+          font-size: 14px;
+          transform: translateY(3px);
+        }
+      }
+      .advs-text {
+        @include fontStyle(24px, $weight-regular, #343434);
+        @include sm {
+          font-size: 18px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.news-archive {
+  padding: 88px 0 0;
+  @include sm {
+    padding: 30px 0 0;
+  }
+}
+.news-archive-slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @include sm {
+    gap: 10px;
+  }
+  @include xs {
+    grid-template-columns: 1fr;
+  }
+}

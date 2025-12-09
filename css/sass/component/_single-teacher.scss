@@ -1,0 +1,160 @@
+.single-teacher {
+  padding: 192px 97px 36px;
+  @include md {
+    padding: 192px 0 36px;
+  }
+  @include sm {
+    padding: 140px 0 20px;
+  }
+}
+.single-teacher-cont {
+  border: 1px solid lighten($color: $setting_primary_color, $amount: 45%);
+  border-radius: 48px;
+  padding: 0 48px 57px;
+  @include md {
+    padding: 0 30px 57px;
+  }
+  @include sm {
+    border-radius: 24px;
+  }
+  @include xs {
+    border: none;
+    padding: 0;
+  }
+}
+.single-teacher {
+  .teacher-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 203px;
+    margin-top: -104px;
+    margin-bottom: 32px;
+    @include sm {
+      max-width: 180px;
+      margin-top: -90px;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    @include xs {
+      max-width: 130px;
+      margin-bottom: 16px;
+    }
+    .teacher-img {
+      aspect-ratio: 1;
+      width: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .teacher-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .name {
+        @include fontStyle(32px, $weight_bold, #001533);
+        @include sm {
+          font-size: 24px;
+        }
+        @include xs {
+          font-size: 18px;
+        }
+      }
+      .jop-desc {
+        @include fontStyle(18px, $weight_regular, $setting_primary_color);
+        @include sm {
+          font-size: 16px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.teacher-info {
+}
+.teacher-text {
+  @include flexCenter;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 34px;
+  margin-bottom: 32px;
+  @include sm {
+    margin-bottom: 25px;
+  }
+  @include xs {
+    padding-left: 0;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .teacher-p {
+    @include fontStyle(24px, $weight-regular, #343434);
+    @include sm {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 14px;
+    }
+  }
+}
+.teacher-advs {
+  .advs-title {
+    @include fontStyle(
+      40px,
+      $weight-bold,
+      darken($color: $setting_primary_color, $amount: 30%)
+    );
+    margin-bottom: 20px;
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @include xs {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  .advs-box {
+    @include flexCenter;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    @include xs {
+      gap: 2px;
+    }
+    .advs-line {
+      @include flexCenter;
+      gap: 12px;
+      @include sm {
+        gap: 8px;
+      }
+      @include xs {
+        gap: 5px;
+        align-items: start;
+      }
+      .las {
+        @include fontStyle(20px, $weight-regular, #34c759);
+        @include sm {
+          font-size: 16px;
+        }
+        @include xs {
+          font-size: 14px;
+          transform: translateY(3px);
+        }
+      }
+      .advs-text {
+        @include fontStyle(24px, $weight-regular, #343434);
+        @include sm {
+          font-size: 16px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

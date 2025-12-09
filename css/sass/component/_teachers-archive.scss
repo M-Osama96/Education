@@ -1,0 +1,20 @@
+.teachers-archive-slide {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  @include sm {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @include xs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+.teachers-archive {
+  padding: 88px 0 0;
+  @include sm {
+    padding: 30px 0 0;
+  }
+}

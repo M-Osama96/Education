@@ -1,0 +1,201 @@
+.news-slider {
+  padding: 70px 0;
+  @include sm {
+    padding: 20px 0;
+  }
+}
+.news-slider-cont {
+  //   padding: 90px 65px;
+  position: relative;
+
+  .news-slider-title {
+    font-size: 40px;
+    font-weight: $weight_bold;
+    color: #010101;
+    text-align: center;
+    margin-bottom: 40px;
+    text-align: center;
+    @include sm {
+      font-size: 34px;
+      margin-bottom: 22px;
+    }
+    @include xs {
+      font-size: 24px;
+    }
+  }
+}
+.news-slider-cont {
+  .news-item {
+    border: 1px solid lighten($color: $setting_primary_color, $amount: 40%);
+    border-radius: 24px;
+    overflow: hidden;
+    display: block;
+    @include sm {
+      border-radius: 18px;
+    }
+
+    .item-cont {
+      padding: 19px 19px 38px;
+      @include sm {
+        padding: 10px 10px 20px;
+      }
+      .item-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        transition: all 0.4s ease-in-out;
+        @include sm {
+          margin-bottom: 8px;
+        }
+        .item-calender {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          background-color: lighten(
+            $color: $setting_secondary_color,
+            $amount: 30%
+          );
+          .la-calendar {
+            color: $setting_secondary_color;
+            font-size: 20px;
+          }
+          .item-date {
+            @include fontStyle(16px, $weight_medium, #181818);
+            margin-inline-end: 5px;
+          }
+        }
+        .icon {
+          transition: all 0.4s ease-in-out;
+          background-color: lighten(
+            $color: $setting_primary_color,
+            $amount: 45%
+          );
+          width: 40px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid $setting_primary_color;
+          @include sm {
+            width: 35px;
+          }
+          @include xs {
+            width: 35px;
+          }
+          .la-arrow-left {
+            transition: all 0.4s ease-in-out;
+            font-size: 20px;
+            color: $setting_primary_color;
+            @include sm {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .item-desc {
+        @include fontStyle(20px, $weight_bold, #181818);
+        transition: all 0.4s ease-in-out;
+        @include md {
+          font-size: 18px;
+        }
+        @include sm {
+          font-size: 14px;
+        }
+      }
+    }
+    .item-img {
+      aspect-ratio: 323/199;
+      transition: all 0.4s ease-in-out;
+      .img-cover {
+        display: flex;
+      }
+    }
+    &:hover {
+      .item-row {
+        transform: translateY(9px);
+        @include sm {
+          transform: translateY(6px);
+        }
+        .icon {
+          background-color: $setting_primary_color;
+          transform: translateX(10px) scale(1.2) rotate(45deg);
+          @include sm {
+            transform: translateX(6px) scale(1.1) rotate(45deg);
+          }
+          .la-arrow-left {
+            color: #fff;
+          }
+        }
+      }
+      .item-desc {
+        transform: translateY(16px);
+        color: $setting_primary_color;
+        @include sm {
+          transform: translateY(10px);
+        }
+      }
+      .item-img {
+        transform: scaleY(1.03);
+      }
+    }
+  }
+}
+.news-slider-cont {
+  .swiper-pagination {
+    position: relative;
+    margin-top: 50px;
+    display: none;
+    @include md {
+      display: flex;
+      justify-content: center;
+    }
+    @include sm {
+      margin-top: 30px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $setting_primary_color;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 64px;
+    height: 64px;
+    background-color: $setting_primary_color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 60%;
+    border: 2.67px solid $setting_primary_color;
+    &::after {
+      color: #fff;
+      font-size: 26px;
+    }
+    @include md {
+      display: none;
+    }
+  }
+  .swiper-button-prev {
+    left: -80px;
+    &::after {
+      transform: translateX(-2px);
+    }
+  }
+  .swiper-button-next {
+    right: -80px;
+    &::after {
+      transform: translateX(2px);
+    }
+  }
+  .swiper-button-disabled {
+    opacity: 1 !important;
+    background-color: #fff;
+    &::after {
+      color: $setting_primary_color;
+    }
+  }
+}

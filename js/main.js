@@ -246,3 +246,90 @@ var mainSwiper = new Swiper(".activity-swiper", {
     swiper: thumbsSwiper,
   },
 });
+
+var swiper = new Swiper(".news-archive-swiper", {
+  pagination: {
+    el: ".news-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".news-archive-cont .swiper-button-next",
+    prevEl: ".news-archive-cont .swiper-button-prev",
+  },
+});
+
+var newsSwiper = new Swiper(".news-Swiper", {
+  navigation: {
+    nextEl: ".news-slider-cont .swiper-button-next",
+    prevEl: ".news-slider-cont .swiper-button-prev",
+  },
+  pagination: {
+    el: ".news-slider-cont .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 0px
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
+
+var teachersswiper = new Swiper(".teachers-ar-swiper", {
+  pagination: {
+    el: ".teachers-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".teachers-archive-cont .swiper-button-next",
+    prevEl: ".teachers-archive-cont .swiper-button-prev",
+  },
+});
+var testimonialsswiper = new Swiper(".testimonials-ar-swiper", {
+  pagination: {
+    el: ".testimonials-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".testimonials-archive-cont .swiper-button-next",
+    prevEl: ".testimonials-archive-cont .swiper-button-prev",
+  },
+});
+var mediaswiper = new Swiper(".media-ar-swiper", {
+  pagination: {
+    el: ".media-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".media-archive-cont .swiper-button-next",
+    prevEl: ".media-archive-cont .swiper-button-prev",
+  },
+});

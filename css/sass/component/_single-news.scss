@@ -1,0 +1,186 @@
+.single-news {
+  padding: 88px 0 60px;
+  @include sm {
+    padding: 40px 0 0px;
+  }
+}
+.single-news-cont {
+  .news-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1140/414;
+    border-radius: 40px;
+    overflow: hidden;
+    @include xs {
+      aspect-ratio: 1140/800;
+    }
+    .news-title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      color: darken($color: $setting_primary_color, $amount: 30%);
+      font-size: 40px;
+      font-weight: $weight-bold;
+      background-color: #fff;
+      z-index: 100;
+      padding: 9px 98px 28px;
+      width: max-content;
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+      @include sm {
+        font-size: 28px;
+        padding: 10px 60px 15px;
+      }
+      @include xs {
+        font-size: 18px;
+        padding: 5px 30px 10px;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba($setting_primary_color, 0) 0%,
+        rgba($setting_primary_color, 0.2) 100%
+      );
+    }
+  }
+}
+.news-info {
+  margin: 42px 128px 0 95px;
+  @include md {
+    margin: 42px 40px 0 40px;
+  }
+  @include sm {
+    margin: 20px 20px 0;
+  }
+  @include xs {
+    margin: 20px 0 0;
+  }
+}
+.news-text {
+  @include flexCenter;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding-left: 34px;
+  margin-bottom: 32px;
+  @include sm {
+    margin-bottom: 25px;
+  }
+  @include xs {
+    padding-left: 0;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .item-calender {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: lighten($color: $setting_secondary_color, $amount: 30%);
+    margin-bottom: 12px;
+    width: fit-content;
+    border: 1.12px solid lighten($color: $setting_secondary_color, $amount: 10%);
+    border-radius: 8px;
+    padding: 8px 11px;
+    @include sm {
+      padding: 4px 8px;
+      margin-bottom: 0;
+    }
+    @include xs {
+      padding: 5px 8px 3px;
+    }
+    .la-calendar {
+      color: $setting_secondary_color;
+      font-size: 22px;
+      @include sm {
+        font-size: 20px;
+      }
+      @include xs {
+        font-size: 18px;
+      }
+    }
+    .item-date {
+      @include fontStyle(18px, $weight_medium, #181818);
+      margin-inline-end: 5px;
+      @include sm {
+        font-size: 16px;
+      }
+      @include xs {
+        font-size: 14px;
+      }
+    }
+  }
+  .news-p {
+    @include fontStyle(24px, $weight-regular, #343434);
+    @include sm {
+      font-size: 18px;
+    }
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}
+.news-advs {
+  .advs-title {
+    @include fontStyle(
+      40px,
+      $weight-bold,
+      darken($color: $setting_primary_color, $amount: 30%)
+    );
+    margin-bottom: 20px;
+    @include sm {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @include xs {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  .advs-box {
+    @include flexCenter;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    @include xs {
+      gap: 2px;
+    }
+    .advs-line {
+      @include flexCenter;
+      gap: 12px;
+      @include sm {
+        gap: 8px;
+      }
+      @include xs {
+        gap: 5px;
+        align-items: start;
+      }
+      .las {
+        @include fontStyle(20px, $weight-regular, #34c759);
+        @include sm {
+          font-size: 16px;
+        }
+        @include xs {
+          font-size: 14px;
+          transform: translateY(3px);
+        }
+      }
+      .advs-text {
+        @include fontStyle(24px, $weight-regular, #343434);
+        @include sm {
+          font-size: 18px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

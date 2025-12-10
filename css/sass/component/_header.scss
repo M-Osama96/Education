@@ -55,6 +55,9 @@
     @include sm {
       z-index: 103;
     }
+    @include xs {
+      margin-right: 0;
+    }
     .img-contain {
       z-index: 3;
     }

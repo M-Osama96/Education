@@ -17,6 +17,17 @@
   }
   @include xs {
     padding: 0;
+    border-radius: 20px;
+  }
+  .contact-page & {
+    max-width: 902px;
+    margin: auto;
+    padding-bottom: 75px;
+    position: relative;
+    z-index: 2;
+    @include xs {
+      padding-bottom: 30px;
+    }
   }
 }
 .footer-top {
@@ -47,6 +58,9 @@ form {
     border: none;
     padding: 30px 15px;
   }
+  .contact-page & {
+    width: 100%;
+  }
   .form-title {
     font-size: 20px;
     font-weight: $weight-bold;
@@ -74,6 +88,7 @@ form {
 
   .form-group {
     position: relative;
+    transition: all 0.3s ease;
   }
 
   .form-group input,
@@ -130,6 +145,13 @@ form {
     min-height: 81px;
     font-size: 14px;
     font-weight: $weight_medium;
+    transition: all 0.3s ease;
+    &:focus {
+      background-color: darken($color: $setting_primary_color, $amount: 40%);
+    }
+    &:not(:placeholder-shown) {
+      background-color: darken($color: $setting_primary_color, $amount: 40%);
+    }
 
     &::placeholder {
       color: #fff;
@@ -182,6 +204,9 @@ form {
   @include sm {
     display: none;
   }
+  .contact-page & {
+    display: none;
+  }
 }
 .footer-bottom {
   display: grid;
@@ -191,6 +216,10 @@ form {
   border-top: 1px solid $setting_primary_color;
   @include xs {
     margin: 0;
+    grid-template-columns: 1fr;
+  }
+  .contact-page & {
+    border: none;
     grid-template-columns: 1fr;
   }
 }
@@ -204,6 +233,9 @@ form {
     padding: 30px 20px;
   }
   @include xs {
+    display: none;
+  }
+  .contact-page & {
     display: none;
   }
   .footer-logo {
@@ -229,6 +261,9 @@ form {
   @include xs {
     border: none;
     padding: 30px 30px 20px;
+  }
+  .contact-page & {
+    display: none;
   }
   .nav-tilte {
     @include fontStyle(24px, $weight_medium, #fff);
@@ -278,6 +313,13 @@ form {
     border-top: 1px solid $setting_primary_color;
     border-right: none;
   }
+  .contact-page & {
+    padding: 32px 56px 24px;
+    @include sm {
+      padding: 32px 30px 24px;
+    }
+  }
+
   .contact-title {
     @include fontStyle(24px, $weight_medium, #fff);
     margin-bottom: 24px;
@@ -287,15 +329,33 @@ form {
     @include sm {
       font-size: 18px;
     }
+    .contact-page & {
+      text-align: center;
+      @include xs {
+        text-align: start;
+      }
+    }
   }
   .contact-menue {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    .contact-page & {
+      flex-direction: row;
+      @include xs {
+        flex-direction: column;
+      }
+    }
     .contact-btn {
       display: flex;
       align-items: center;
+
       gap: 10px;
+      .contact-page & {
+        &:nth-of-type(2) {
+          margin-left: 15px;
+        }
+      }
       &:hover {
         .las {
           color: $setting_secondary_color;
@@ -304,6 +364,7 @@ form {
           color: $setting_secondary_color;
         }
       }
+
       .las {
         font-size: 20px;
         color: #fff;
@@ -393,4 +454,23 @@ form {
   @include flexCenter;
   margin-top: 32px;
   text-align: center;
+  .contact-page & {
+    margin: 52px 0 29px;
+    @include xs {
+      margin: 25px 0 15px;
+    }
+  }
+}
+.contact-map {
+  aspect-ratio: 1440/773;
+  margin-top: -32%;
+  z-index: 1;
+  position: relative;
+  @include sm {
+    margin-top: -10%;
+  }
+  @include xs {
+    aspect-ratio: 1.2;
+    margin-top: -20%;
+  }
 }

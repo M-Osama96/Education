@@ -333,3 +333,17 @@ var mediaswiper = new Swiper(".media-ar-swiper", {
     prevEl: ".media-archive-cont .swiper-button-prev",
   },
 });
+var clientsswiper = new Swiper(".clients-ar-swiper", {
+  pagination: {
+    el: ".clients-archive-cont .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      let num = String(index + 1).padStart(2, "0");
+      return '<span class="' + className + '">' + num + "</span>";
+    },
+  },
+  navigation: {
+    nextEl: ".clients-archive-cont .swiper-button-next",
+    prevEl: ".clients-archive-cont .swiper-button-prev",
+  },
+});

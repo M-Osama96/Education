@@ -298,6 +298,10 @@ form {
       }
       a {
         color: #fff;
+        transition: all 0.4s ease;
+        &:hover {
+          color: $setting_secondary_color;
+        }
       }
     }
   }

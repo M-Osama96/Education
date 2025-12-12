@@ -4156,6 +4156,10 @@ form .sub-button .send .send-a {
 }
 .footer-nav .nav-list li a {
   color: #fff;
+  transition: all 0.4s ease;
+}
+.footer-nav .nav-list li a:hover {
+  color: #fc924f;
 }
 
 .contact-column {

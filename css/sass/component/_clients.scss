@@ -24,6 +24,11 @@
     border-radius: 20px;
     padding: 30px 15px 25px;
   }
+  .three-clints & {
+    @include lg {
+      aspect-ratio: 1140/578;
+    }
+  }
   .clients-svg1 {
     position: absolute;
     top: 0;
@@ -33,6 +38,12 @@
     z-index: -1;
     @include md {
       display: none;
+    }
+    .three-clints & {
+      height: 81%;
+      @include md {
+        display: none;
+      }
     }
   }
   .clients-svg2 {
@@ -120,6 +131,8 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     box-shadow: 4.6px 0px 4.6px 0px #0000000a;
+    padding: 4px;
+    background-color: #fff;
     @include lg {
       position: absolute;
     }
@@ -128,6 +141,9 @@
       .img-cover {
         transform: rotate(12deg);
       }
+    }
+    .img-cover {
+      border-radius: 50%;
     }
   }
 }

@@ -35,6 +35,10 @@
   .img-cover {
     display: flex;
   }
+  .media-four & {
+    width: 100%;
+    height: 100%;
+  }
 }
 .media-btn {
   @include flexCenter;
@@ -49,6 +53,16 @@
   @include sm {
     padding: 10px;
     font-size: 18px;
+  }
+  .media-four & {
+    max-width: 155px;
+    font-size: 17px;
+    padding: 0;
+    width: 100%;
+    border: 2.18px solid #ffffff;
+    @include sm {
+      max-width: 120px;
+    }
   }
 }
 .media-text {
@@ -65,6 +79,14 @@
   box-shadow: 0px 4px 12px 0px #00000014;
   @include sm {
     font-size: 20px;
+  }
+  .media-four & {
+    width: calc(24% - 0px);
+    aspect-ratio: 270/200;
+    @include xs {
+      width: calc(50% - 4px);
+      border-radius: 8px;
+    }
   }
 }
 .vid {

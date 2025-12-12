@@ -1,0 +1,64 @@
+.media-four {
+  padding: 140px 0 70px;
+  @include sm {
+    padding: 40px 0 20px;
+  }
+}
+
+.media-four-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include md {
+    gap: 12px;
+  }
+  @include sm {
+    gap: 8px;
+  }
+  @include xs {
+  }
+  .media-img {
+    width: calc(37.5% - 15px);
+    aspect-ratio: 410/200;
+    border: 2px solid #ffffff;
+    @include xs {
+      width: calc(50% - 4px);
+      aspect-ratio: 270/200;
+    }
+  }
+  .media-btn-cont {
+    width: calc(24% - 0px);
+    aspect-ratio: 270/200;
+    @include flexCenter;
+    @include xs {
+      width: calc(50% - 4px);
+    }
+  }
+  //   .div2 {
+  //     grid-column: span 2 / span 2;
+  //   }
+
+  //   .div3 {
+  //     grid-column: span 2 / span 2;
+  //     grid-column-start: 4;
+  //   }
+
+  //   .div4 {
+  //     grid-column: span 2 / span 2;
+  //     grid-row-start: 2;
+  //   }
+
+  //   .div5 {
+  //     grid-column: span 2 / span 2;
+  //     grid-column-start: 3;
+  //     grid-row-start: 2;
+  //   }
+
+  //   .div6 {
+  //     grid-column-start: 5;
+  //     grid-row-start: 2;
+  //   }
+}

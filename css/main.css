@@ -1156,7 +1156,7 @@ iframe {
   width: 50px;
   height: 96px;
   background-color: transparent;
-  border-top-right-radius: 48px;
+  border-top-right-radius: 30px;
   box-shadow: 20px -20px 0 10px #fff;
 }
 @media (max-width: 991px) {
@@ -1179,7 +1179,7 @@ iframe {
   width: 96px;
   height: 96px;
   background-color: transparent;
-  border-top-left-radius: 48px;
+  border-top-left-radius: 30px;
   box-shadow: -20px -20px 0 0px #fff;
 }
 @media (max-width: 991px) {
@@ -1470,7 +1470,7 @@ iframe {
 }
 @media (max-width: 767px) {
   .departments-item .item-title {
-    font-size: 13px;
+    font-size: 12px;
     max-width: 72%;
   }
 }
@@ -3294,6 +3294,10 @@ iframe {
 .sq-img .img-cover {
   display: flex;
 }
+.media-four .sq-img {
+  width: 100%;
+  height: 100%;
+}
 
 .media-btn {
   display: flex;
@@ -3318,6 +3322,18 @@ iframe {
     font-size: 18px;
   }
 }
+.media-four .media-btn {
+  max-width: 155px;
+  font-size: 17px;
+  padding: 0;
+  width: 100%;
+  border: 2.18px solid #ffffff;
+}
+@media (max-width: 991px) {
+  .media-four .media-btn {
+    max-width: 120px;
+  }
+}
 
 .media-text {
   background: radial-gradient(50% 50% at 50% 50%, rgb(16.0714285714, 88.3928571429, 196.4285714286) 0%, rgb(8.3571428571, 45.9642857143, 102.1428571429) 100%);
@@ -3333,6 +3349,16 @@ iframe {
 @media (max-width: 991px) {
   .media-text {
     font-size: 20px;
+  }
+}
+.media-four .media-text {
+  width: calc(24% - 0px);
+  aspect-ratio: 270/200;
+}
+@media (max-width: 767px) {
+  .media-four .media-text {
+    width: calc(50% - 4px);
+    border-radius: 8px;
   }
 }
 
@@ -3522,6 +3548,11 @@ iframe {
     padding: 30px 15px 25px;
   }
 }
+@media (min-width: 1200px) {
+  .three-clints .clients-cont {
+    aspect-ratio: 1140/578;
+  }
+}
 .clients-cont .clients-svg1 {
   position: absolute;
   top: 0;
@@ -3532,6 +3563,14 @@ iframe {
 }
 @media (max-width: 1199px) {
   .clients-cont .clients-svg1 {
+    display: none;
+  }
+}
+.three-clints .clients-cont .clients-svg1 {
+  height: 81%;
+}
+@media (max-width: 1199px) {
+  .three-clints .clients-cont .clients-svg1 {
     display: none;
   }
 }
@@ -3657,6 +3696,8 @@ iframe {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   box-shadow: 4.6px 0px 4.6px 0px rgba(0, 0, 0, 0.0392156863);
+  padding: 4px;
+  background-color: #fff;
 }
 @media (min-width: 1200px) {
   .clients-row .client-img {
@@ -3668,6 +3709,9 @@ iframe {
 }
 .clients-row .client-img:hover .img-cover {
   transform: rotate(12deg);
+}
+.clients-row .client-img .img-cover {
+  border-radius: 50%;
 }
 
 @media (min-width: 1200px) {
@@ -6379,4 +6423,54 @@ form .sub-button .send .send-a {
 }
 .clients-archive .client-img:hover .img-cover {
   transform: rotate(12deg);
+}
+
+.media-four {
+  padding: 140px 0 70px;
+}
+@media (max-width: 991px) {
+  .media-four {
+    padding: 40px 0 20px;
+  }
+}
+
+.media-four-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .media-four-cont {
+    gap: 12px;
+  }
+}
+@media (max-width: 991px) {
+  .media-four-cont {
+    gap: 8px;
+  }
+}
+.media-four-cont .media-img {
+  width: calc(37.5% - 15px);
+  aspect-ratio: 410/200;
+  border: 2px solid #ffffff;
+}
+@media (max-width: 767px) {
+  .media-four-cont .media-img {
+    width: calc(50% - 4px);
+    aspect-ratio: 270/200;
+  }
+}
+.media-four-cont .media-btn-cont {
+  width: calc(24% - 0px);
+  aspect-ratio: 270/200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .media-four-cont .media-btn-cont {
+    width: calc(50% - 4px);
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -67,6 +67,7 @@
         align-items: center;
         justify-content: center;
         gap: 4px;
+        border-radius: 4px;
         background-color: lighten(
           $color: $setting_secondary_color,
           $amount: 30%

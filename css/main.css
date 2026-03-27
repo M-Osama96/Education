@@ -644,8 +644,7 @@ iframe {
   border-radius: 48px;
   width: 100%;
   max-width: 1140px;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   background-color: rgba(145, 185.5, 246, 0.1);
   border: 1px solid #fff;
 }
@@ -2049,6 +2048,7 @@ iframe {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  border-radius: 4px;
   background-color: rgb(254.5642458101, 239.1675977654, 229.4357541899);
 }
 .news-item .item-cont .item-row .item-calender .la-calendar {
@@ -2763,15 +2763,15 @@ iframe {
     transform: translate(-50%, -50%);
   }
 }
-.testimonials-Swiper .swiper-slide-next,
-.testimonials-Swiper .swiper-slide-next + .swiper-slide + .swiper-slide {
-  transition: all 0.3s ease-in-out;
-}
 @media (min-width: 1200px) {
   .testimonials-Swiper .swiper-slide-next,
   .testimonials-Swiper .swiper-slide-next + .swiper-slide + .swiper-slide {
     transform: translateX(-120px);
   }
+}
+.testimonials-Swiper .swiper-slide-next,
+.testimonials-Swiper .swiper-slide-next + .swiper-slide + .swiper-slide {
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
   .testimonials-Swiper .swiper-slide-next .testi-slide,
@@ -2944,10 +2944,6 @@ iframe {
     width: 100%;
   }
 }
-.inView .inner-banner .banner-svg {
-  opacity: 1;
-  z-index: 3;
-}
 @media (min-width: 1200px) {
   .inView .inner-banner .banner-svg {
     animation: DownUpSettler 2.5s ease-out forwards;
@@ -2958,6 +2954,10 @@ iframe {
     transform: translateY(0);
     top: 0;
   }
+}
+.inView .inner-banner .banner-svg {
+  opacity: 1;
+  z-index: 3;
 }
 
 @keyframes DownUpSettler {
@@ -2994,14 +2994,14 @@ iframe {
     align-items: center;
   }
 }
-.inView .r-imgs-group {
-  opacity: 1;
-  z-index: 3;
-}
 @media (min-width: 1200px) {
   .inView .r-imgs-group {
     animation: upDownSettle 2.5s ease-out forwards;
   }
+}
+.inView .r-imgs-group {
+  opacity: 1;
+  z-index: 3;
 }
 @media (max-width: 1199px) {
   .inView .r-imgs-group {
@@ -3090,14 +3090,14 @@ iframe {
     align-items: center;
   }
 }
-.inView .l-imgs-group {
-  opacity: 1;
-  z-index: 3;
-}
 @media (min-width: 1200px) {
   .inView .l-imgs-group {
     animation: upDownSettle 2.5s ease-out forwards;
   }
+}
+.inView .l-imgs-group {
+  opacity: 1;
+  z-index: 3;
 }
 @media (max-width: 1199px) {
   .inView .l-imgs-group {
@@ -3177,10 +3177,6 @@ iframe {
   transform: translateY(-700px);
   opacity: 0;
 }
-.inView .banner-center {
-  opacity: 1;
-  z-index: 3;
-}
 @media (min-width: 1200px) {
   .inView .banner-center {
     animation: upDownSettle 2.5s ease-out forwards;
@@ -3190,6 +3186,10 @@ iframe {
   .inView .banner-center {
     transform: translateY(0);
   }
+}
+.inView .banner-center {
+  opacity: 1;
+  z-index: 3;
 }
 .banner-center .title {
   font-size: 40px;
@@ -3832,7 +3832,7 @@ form {
   flex-direction: column;
   gap: 16px;
   width: 68%;
-  border: 1px solid rgb(50.7142857143, 125.9285714286, 238.2857142857);
+  border: 1px solid rgb(14.1428571429, 77.7857142857, 172.8571428571);
   border-radius: 16px;
   padding: 42px 32px 53px;
 }
@@ -3902,7 +3902,7 @@ form textarea {
   font-size: 14px;
   font-weight: 500;
   background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgb(50.7142857143, 125.9285714286, 238.2857142857);
+  border: 1px solid rgb(14.1428571429, 77.7857142857, 172.8571428571);
   color: #fff;
   border-radius: 8px;
 }
@@ -3949,10 +3949,12 @@ form .form-group input:not(:placeholder-shown) + label {
 }
 form .form-group input:not(:-moz-placeholder) {
   background-color: rgb(2.5714285714, 14.1428571429, 31.4285714286);
+  box-shadow: 0px 4px 4px 0px rgba(14.1428571429, 77.7857142857, 172.8571428571, 0.5);
 }
 form .form-group input:focus,
 form .form-group input:not(:placeholder-shown) {
   background-color: rgb(2.5714285714, 14.1428571429, 31.4285714286);
+  box-shadow: 0px 4px 4px 0px rgba(14.1428571429, 77.7857142857, 172.8571428571, 0.5);
 }
 form textarea {
   resize: none;
@@ -3963,12 +3965,15 @@ form textarea {
 }
 form textarea:focus {
   background-color: rgb(2.5714285714, 14.1428571429, 31.4285714286);
+  box-shadow: 0px 4px 4px 0px rgba(14.1428571429, 77.7857142857, 172.8571428571, 0.5);
 }
 form textarea:not(:-moz-placeholder) {
   background-color: rgb(2.5714285714, 14.1428571429, 31.4285714286);
+  box-shadow: 0px 4px 4px 0px rgba(14.1428571429, 77.7857142857, 172.8571428571, 0.5);
 }
 form textarea:not(:placeholder-shown) {
   background-color: rgb(2.5714285714, 14.1428571429, 31.4285714286);
+  box-shadow: 0px 4px 4px 0px rgba(14.1428571429, 77.7857142857, 172.8571428571, 0.5);
 }
 form textarea::-moz-placeholder {
   color: #fff;
@@ -4038,7 +4043,7 @@ form .sub-button .send .send-a {
   grid-template-columns: repeat(3, 1fr);
   color: #fff;
   margin-top: 32px;
-  border-top: 1px solid #1263dc;
+  border-top: 1px solid rgb(14.1428571429, 77.7857142857, 172.8571428571);
 }
 @media (max-width: 767px) {
   .footer-bottom {
@@ -4091,7 +4096,7 @@ form .sub-button .send .send-a {
 
 .footer-nav {
   padding: 35px 78px 35px 35px;
-  border-right: 1px solid #1263dc;
+  border-right: 1px solid rgb(14.1428571429, 77.7857142857, 172.8571428571);
 }
 @media (max-width: 991px) {
   .footer-nav {
@@ -4164,7 +4169,7 @@ form .sub-button .send .send-a {
 
 .contact-column {
   padding: 35px 50px 37px 35px;
-  border-right: 1px solid #1263dc;
+  border-right: 1px solid rgb(14.1428571429, 77.7857142857, 172.8571428571);
 }
 @media (max-width: 991px) {
   .contact-column {
@@ -4574,9 +4579,6 @@ form .sub-button .send .send-a {
   }
 }
 @media (max-width: 1199px) {
-  .activities-archive-slide .activity-item.active-ar {
-    width: calc(33.4% - 17px);
-  }
   .activities-archive-slide .activity-item.active-ar .activity-slide {
     position: relative;
     border-radius: 88px;
@@ -4584,6 +4586,9 @@ form .sub-button .send .send-a {
     overflow: hidden;
     aspect-ratio: 367/448;
     max-width: 367px;
+  }
+  .activities-archive-slide .activity-item.active-ar {
+    width: calc(33.4% - 17px);
   }
 }
 @media (max-width: 1199px) and (max-width: 1199px) {
@@ -4796,9 +4801,6 @@ form .sub-button .send .send-a {
   }
 }
 @media (min-width: 767px) and (max-width: 991px) {
-  .activities-archive-slide .activity-item.active-sm {
-    width: calc(50% - 15px);
-  }
   .activities-archive-slide .activity-item.active-sm .activity-slide {
     position: relative;
     border-radius: 88px;
@@ -4806,6 +4808,9 @@ form .sub-button .send .send-a {
     overflow: hidden;
     aspect-ratio: 367/448;
     max-width: 367px;
+  }
+  .activities-archive-slide .activity-item.active-sm {
+    width: calc(50% - 15px);
   }
 }
 @media (min-width: 767px) and (max-width: 991px) and (max-width: 1199px) {

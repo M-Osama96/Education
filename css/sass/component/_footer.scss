@@ -43,7 +43,7 @@ form {
   flex-direction: column;
   gap: 16px;
   width: 68%;
-  border: 1px solid lighten($color: $setting_primary_color, $amount: 10%);
+  border: 1px solid darken($color: $setting_primary_color, $amount: 10%);
   border-radius: 16px;
   padding: 42px 32px 53px;
   @include md {
@@ -100,7 +100,7 @@ form {
     font-size: 14px;
     font-weight: $weight_medium;
     background: rgba(darken($setting_primary_color, 50%), 0.2);
-    border: 1px solid lighten($color: $setting_primary_color, $amount: 10%);
+    border: 1px solid darken($color: $setting_primary_color, $amount: 10%);
     color: #fff;
     border-radius: 8px;
     @include xs {
@@ -138,6 +138,11 @@ form {
   .form-group input:focus,
   .form-group input:not(:placeholder-shown) {
     background-color: darken($color: $setting_primary_color, $amount: 40%);
+    box-shadow: 0px 4px 4px 0px
+      rgba(
+        $color: darken($color: $setting_primary_color, $amount: 10%),
+        $alpha: 0.5
+      );
   }
 
   textarea {
@@ -148,9 +153,19 @@ form {
     transition: all 0.3s ease;
     &:focus {
       background-color: darken($color: $setting_primary_color, $amount: 40%);
+      box-shadow: 0px 4px 4px 0px
+        rgba(
+          $color: darken($color: $setting_primary_color, $amount: 10%),
+          $alpha: 0.5
+        );
     }
     &:not(:placeholder-shown) {
       background-color: darken($color: $setting_primary_color, $amount: 40%);
+      box-shadow: 0px 4px 4px 0px
+        rgba(
+          $color: darken($color: $setting_primary_color, $amount: 10%),
+          $alpha: 0.5
+        );
     }
 
     &::placeholder {
@@ -213,7 +228,7 @@ form {
   grid-template-columns: repeat(3, 1fr);
   color: #fff;
   margin-top: 32px;
-  border-top: 1px solid $setting_primary_color;
+  border-top: 1px solid darken($color: $setting_primary_color, $amount: 10%);
   @include xs {
     margin: 0;
     grid-template-columns: 1fr;
@@ -254,7 +269,7 @@ form {
 }
 .footer-nav {
   padding: 35px 78px 35px 35px;
-  border-right: 1px solid $setting_primary_color;
+  border-right: 1px solid darken($color: $setting_primary_color, $amount: 10%);
   @include sm {
     padding: 30px 20px;
   }
@@ -308,7 +323,7 @@ form {
 }
 .contact-column {
   padding: 35px 50px 37px 35px;
-  border-right: 1px solid $setting_primary_color;
+  border-right: 1px solid darken($color: $setting_primary_color, $amount: 10%);
   @include sm {
     padding: 30px 20px;
   }

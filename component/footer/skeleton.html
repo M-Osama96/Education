@@ -1,0 +1,324 @@
+<footer class="skeleton-wrapper sk-footer-dark">
+  <div class="skeleton-container">
+    <div class="sk-footer-panel">
+      <div class="sk-contact-split">
+        <div class="sk-contact-form">
+          <div class="sk-line sk-contact-title skeleton-shimmer"></div>
+
+          <div class="sk-contact-row">
+            <div class="sk-field skeleton-shimmer"></div>
+            <div class="sk-field skeleton-shimmer"></div>
+          </div>
+          <div class="sk-contact-row">
+            <div class="sk-field skeleton-shimmer"></div>
+            <div class="sk-field skeleton-shimmer"></div>
+          </div>
+
+          <div class="sk-field sk-contact-textarea skeleton-shimmer"></div>
+          <div class="sk-field sk-contact-submit skeleton-shimmer"></div>
+        </div>
+
+        <div class="sk-contact-img skeleton-shimmer"></div>
+      </div>
+
+      <div class="sk-footer-body">
+        <div class="sk-footer-col sk-footer-col-brand">
+          <div class="sk-logo-img skeleton-shimmer"></div>
+          <div class="sk-line skeleton-shimmer"></div>
+          <div class="sk-line skeleton-shimmer"></div>
+          <div class="sk-social-row">
+            <div class="sk-social-icon skeleton-shimmer"></div>
+            <div class="sk-social-icon skeleton-shimmer"></div>
+            <div class="sk-social-icon skeleton-shimmer"></div>
+            <div class="sk-social-icon skeleton-shimmer"></div>
+          </div>
+        </div>
+
+        <div class="sk-footer-col sk-footer-col-links">
+          <div class="sk-col-heading skeleton-shimmer"></div>
+          <div class="sk-links-grid">
+            <div class="sk-links-sub">
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+            </div>
+            <div class="sk-links-sub">
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+              <div class="sk-line skeleton-shimmer"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sk-footer-col sk-footer-col-contact">
+          <div class="sk-col-heading skeleton-shimmer"></div>
+          <div class="sk-contact-item">
+            <div class="sk-contact-icon skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+          </div>
+          <div class="sk-contact-item">
+            <div class="sk-contact-icon skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+          </div>
+          <div class="sk-contact-item">
+            <div class="sk-contact-icon skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+          </div>
+          <div class="sk-contact-item">
+            <div class="sk-contact-icon skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sk-footer-copyright">
+      <div class="sk-line skeleton-shimmer"></div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .skeleton-wrapper.sk-footer-dark {
+    padding-block: 60px;
+  }
+
+  .sk-footer-panel {
+    background: #b6b6b6;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .sk-contact-split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 24px;
+    padding: 40px;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sk-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sk-contact-title {
+    height: 20px;
+    width: 100px;
+    align-self: center;
+    border-radius: 4px;
+  }
+
+  .sk-contact-row {
+    display: flex;
+    gap: 20px;
+  }
+  .sk-field {
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    flex: 1;
+  }
+  .sk-contact-textarea {
+    height: 110px;
+  }
+  .sk-contact-submit {
+    height: 56px;
+    border-radius: 999px;
+  }
+
+  .sk-contact-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    min-height: 280px;
+  }
+
+  .sk-footer-body {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1.2fr;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .sk-footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .sk-footer-col-brand {
+    align-items: flex-start;
+  }
+  .sk-logo-img {
+    width: 170px;
+    height: 130px;
+    border-radius: 12px;
+  }
+  .sk-footer-col-brand .sk-line {
+    height: 14px;
+    width: 80%;
+    border-radius: 4px;
+  }
+  .sk-social-row {
+    display: flex;
+    gap: 10px;
+    margin-block-start: 8px;
+  }
+  .sk-social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .sk-col-heading {
+    height: 20px;
+    width: 55%;
+    border-radius: 4px;
+    margin-block-end: 6px;
+  }
+
+  .sk-links-grid {
+    display: flex;
+    gap: 32px;
+  }
+  .sk-links-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+  .sk-links-sub .sk-line {
+    height: 13px;
+    width: 75%;
+    border-radius: 4px;
+  }
+
+  .sk-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sk-contact-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .sk-contact-item .sk-line {
+    height: 13px;
+    width: 80%;
+    border-radius: 4px;
+  }
+
+  .sk-footer-panel .skeleton-shimmer {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .sk-footer-panel .skeleton-shimmer::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+  }
+
+  .sk-footer-copyright {
+    display: flex;
+    justify-content: center;
+    padding-block-start: 32px;
+  }
+  .sk-footer-copyright .sk-line {
+    height: 14px;
+    width: 220px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 992px) {
+    .sk-contact-split {
+      grid-template-columns: 1fr;
+    }
+    .sk-footer-body {
+      grid-template-columns: 1fr 1fr;
+    }
+    .sk-footer-col-brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sk-contact-row {
+      flex-direction: column;
+    }
+    .sk-footer-body {
+      grid-template-columns: 1fr;
+      padding: 32px 24px;
+    }
+    .sk-contact-split {
+      padding: 24px;
+    }
+  }
+</style>
+
+<style>
+  *,
+  :before,
+  :after {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+  }
+  :root {
+    --sk-shimmer-dir: 1;
+  }
+  [dir="rtl"] {
+    --sk-shimmer-dir: -1;
+  }
+
+  .skeleton-wrapper {
+    height: fit-content;
+    padding-block: 100px;
+    width: 100%;
+  }
+  .skeleton-wrapper.sk-full-bg {
+    background: rgba(229, 231, 235, 0.45);
+  }
+  .skeleton-wrapper.sk-footer {
+    padding-block: 60px 0;
+  }
+
+  .skeleton-container {
+    padding-inline: 20px;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1180px;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #e5e7eb;
+  }
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(calc(-100% * var(--sk-shimmer-dir)));
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    animation: skeleton-shimmer-animation 1.5s infinite;
+  }
+  @keyframes skeleton-shimmer-animation {
+    100% {
+      transform: translateX(calc(100% * var(--sk-shimmer-dir)));
+    }
+  }
+</style>

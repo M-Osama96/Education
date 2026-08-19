@@ -1,0 +1,11 @@
+@mixin fontStyle($size: 16px, $weight: 400, $color: #000) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin flexCenter($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+ add this to mixins.scss

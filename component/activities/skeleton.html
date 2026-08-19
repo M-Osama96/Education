@@ -1,0 +1,265 @@
+<section class="skeleton-wrapper sk-pill-section">
+  <div class="skeleton-container">
+    <div class="sk-section-head">
+      <div class="sk-line sk-section-title skeleton-shimmer"></div>
+      <div class="sk-line sk-section-sub skeleton-shimmer"></div>
+      <div class="sk-line sk-section-sub2 skeleton-shimmer"></div>
+    </div>
+
+    <div class="sk-carousel">
+      <div class="sk-carousel-arrow skeleton-shimmer"></div>
+
+      <div class="sk-carousel-track">
+        <div class="sk-pill-card sk-pill-sm skeleton-shimmer">
+          <div class="sk-pill-label skeleton-shimmer"></div>
+        </div>
+
+        <div class="sk-pill-card sk-pill-sm skeleton-shimmer">
+          <div class="sk-pill-label skeleton-shimmer"></div>
+        </div>
+
+        <div class="sk-pill-card sk-pill-lg skeleton-shimmer">
+          <div class="sk-pill-content">
+            <div class="sk-line sk-pill-title skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+            <div class="sk-line skeleton-shimmer"></div>
+            <div class="sk-line sk-pill-line-short skeleton-shimmer"></div>
+            <div class="sk-line sk-pill-link skeleton-shimmer"></div>
+          </div>
+        </div>
+
+        <div class="sk-pill-card sk-pill-sm skeleton-shimmer">
+          <div class="sk-pill-label skeleton-shimmer"></div>
+        </div>
+
+        <div class="sk-pill-card sk-pill-sm skeleton-shimmer">
+          <div class="sk-pill-label skeleton-shimmer"></div>
+        </div>
+      </div>
+
+      <div class="sk-carousel-arrow skeleton-shimmer"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skeleton-wrapper.sk-pill-section {
+    padding-block: 100px;
+  }
+
+  .sk-section-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-block-end: 56px;
+  }
+  .sk-section-title {
+    height: 2.4em;
+    width: 26%;
+    border-radius: 4px;
+  }
+  .sk-section-sub {
+    height: 14px;
+    width: 40%;
+    border-radius: 4px;
+  }
+  .sk-section-sub2 {
+    height: 14px;
+    width: 32%;
+    border-radius: 4px;
+  }
+
+  .sk-carousel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .sk-carousel-arrow {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .sk-carousel-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sk-pill-card {
+    border-radius: 999px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sk-pill-sm {
+    width: 200px;
+    height: 440px;
+  }
+
+  .sk-pill-label {
+    width: 44px;
+    height: 220px;
+    border-radius: 999px;
+  }
+
+  .sk-pill-lg {
+    width: 450px;
+    height: 560px;
+    border-radius: 100px;
+    align-items: flex-end;
+    justify-content: center;
+    padding-block-end: 28px;
+  }
+
+  .sk-pill-content {
+    width: 88%;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .sk-pill-content .sk-line {
+    height: 14px;
+    width: 90%;
+    border-radius: 4px;
+  }
+  .sk-pill-title {
+    height: 1.6em;
+    width: 70%;
+  }
+  .sk-pill-line-short {
+    width: 55%;
+  }
+  .sk-pill-link {
+    height: 14px;
+    width: 35%;
+  }
+
+  @media (max-width: 992px) {
+    .sk-pill-sm {
+      width: 150px;
+      height: 340px;
+    }
+    .sk-pill-label {
+      height: 170px;
+    }
+    .sk-pill-lg {
+      width: 340px;
+      height: 440px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sk-carousel-track {
+      gap: 14px;
+    }
+    .sk-pill-sm:nth-child(1),
+    .sk-pill-sm:nth-child(2):not(.sk-pill-lg) {
+      display: none;
+    }
+    .sk-pill-sm {
+      width: 110px;
+      height: 260px;
+    }
+    .sk-pill-label {
+      height: 130px;
+      width: 36px;
+    }
+    .sk-pill-lg {
+      width: 260px;
+      height: 360px;
+    }
+    .sk-carousel-arrow {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sk-carousel-track .sk-pill-sm {
+      display: none;
+    }
+    .sk-pill-lg {
+      width: 220px;
+      height: 320px;
+    }
+    .sk-section-title {
+      width: 60%;
+    }
+    .sk-section-sub,
+    .sk-section-sub2 {
+      width: 80%;
+    }
+  }
+</style>
+
+<style>
+  *,
+  :before,
+  :after {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+  }
+  :root {
+    --sk-shimmer-dir: 1;
+  }
+  [dir="rtl"] {
+    --sk-shimmer-dir: -1;
+  }
+
+  .skeleton-wrapper {
+    height: fit-content;
+    padding-block: 100px;
+    width: 100%;
+  }
+  .skeleton-wrapper.sk-full-bg {
+    background: rgba(229, 231, 235, 0.45);
+  }
+
+  .skeleton-container {
+    padding-inline: 20px;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1180px;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #e5e7eb;
+  }
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(calc(-100% * var(--sk-shimmer-dir)));
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    animation: skeleton-shimmer-animation 1.5s infinite;
+  }
+  @keyframes skeleton-shimmer-animation {
+    100% {
+      transform: translateX(calc(100% * var(--sk-shimmer-dir)));
+    }
+  }
+</style>

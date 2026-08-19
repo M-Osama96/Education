@@ -1,0 +1,117 @@
+<section class="skeleton-wrapper sk-news-section">
+  <div class="skeleton-container">
+
+    <div class="sk-section-head">
+      <div class="sk-line sk-section-title skeleton-shimmer"></div>
+    </div>
+
+    <div class="sk-card-grid">
+      <div class="sk-card">
+        <div class="sk-card-top">
+          <div class="sk-badge skeleton-shimmer"></div>
+          <div class="sk-arrow-btn skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-title">
+          <div class="sk-line skeleton-shimmer"></div>
+          <div class="sk-line skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-img skeleton-shimmer"></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-card-top">
+          <div class="sk-badge skeleton-shimmer"></div>
+          <div class="sk-arrow-btn skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-title">
+          <div class="sk-line skeleton-shimmer"></div>
+          <div class="sk-line skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-img skeleton-shimmer"></div>
+      </div>
+
+      <div class="sk-card">
+        <div class="sk-card-top">
+          <div class="sk-badge skeleton-shimmer"></div>
+          <div class="sk-arrow-btn skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-title">
+          <div class="sk-line skeleton-shimmer"></div>
+          <div class="sk-line skeleton-shimmer"></div>
+        </div>
+        <div class="sk-card-img skeleton-shimmer"></div>
+      </div>
+    </div>
+
+    <div class="sk-news-btn skeleton-shimmer"></div>
+
+  </div>
+</section>
+
+<style>
+.skeleton-wrapper.sk-news-section { padding-block: 100px; }
+
+.sk-section-head { display:flex; justify-content:center; margin-block-end:48px; }
+.sk-section-title { height:2.2em; width:36%; border-radius:4px; }
+
+.sk-card-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-block-end:40px; }
+
+.sk-card {
+  display:flex;
+  flex-direction:column;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.sk-card-top {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 20px 0;
+}
+
+.sk-badge { height:28px; width:90px; border-radius:6px; }
+.sk-arrow-btn { width:40px; height:40px; border-radius:50%; flex-shrink:0; }
+
+.sk-card-title { display:flex; flex-direction:column; gap:10px; padding:16px 20px 24px; }
+.sk-card-title .sk-line { height:16px; border-radius:4px; }
+.sk-card-title .sk-line:nth-child(1) { width:90%; }
+.sk-card-title .sk-line:nth-child(2) { width:65%; }
+
+.sk-card-img { width:100%; aspect-ratio:16/9; }
+
+.sk-news-btn { height:52px; width:220px; border-radius:999px; margin-inline:auto; }
+
+@media (max-width: 768px) {
+  .sk-card-grid { grid-template-columns:repeat(2,1fr); }
+}
+
+@media (max-width: 480px) {
+  .sk-card-grid { grid-template-columns:1fr; }
+  .sk-section-title { width:70%; }
+  .sk-news-btn { width:100%; }
+}
+</style>
+
+<style>
+*, :before, :after { box-sizing:border-box; border:none; margin:0; }
+:root { --sk-shimmer-dir:1; }
+[dir="rtl"] { --sk-shimmer-dir:-1; }
+
+.skeleton-wrapper { height:fit-content; padding-block:100px; width:100%; }
+.skeleton-wrapper.sk-full-bg  { background:rgba(229,231,235,0.45); }
+
+.skeleton-container { padding-inline:20px; margin-inline:auto; width:100%; max-width:1180px; }
+
+.skeleton-shimmer { position:relative; overflow:hidden; background:#e5e7eb; }
+.skeleton-shimmer::after {
+  content:""; position:absolute; inset:0;
+  transform:translateX(calc(-100% * var(--sk-shimmer-dir)));
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),transparent);
+  animation:skeleton-shimmer-animation 1.5s infinite;
+}
+@keyframes skeleton-shimmer-animation {
+  100% { transform:translateX(calc(100% * var(--sk-shimmer-dir))); }
+}
+</style>

@@ -1,0 +1,115 @@
+<section class="skeleton-wrapper sk-media-section">
+  <div class="skeleton-container">
+
+    <div class="sk-media-grid">
+      <div class="sk-media-cell sk-media-text skeleton-shimmer">
+        <div class="sk-line skeleton-shimmer"></div>
+        <div class="sk-line skeleton-shimmer"></div>
+      </div>
+
+      <div class="sk-media-cell sk-media-img1 skeleton-shimmer"></div>
+      <div class="sk-media-cell sk-media-img2 skeleton-shimmer"></div>
+      <div class="sk-media-cell sk-media-img3 skeleton-shimmer"></div>
+      <div class="sk-media-cell sk-media-img4 skeleton-shimmer"></div>
+
+      <div class="sk-media-cell sk-media-video skeleton-shimmer">
+        <div class="sk-play-btn skeleton-shimmer"></div>
+      </div>
+
+      <div class="sk-media-cell sk-media-img5 skeleton-shimmer"></div>
+      <div class="sk-media-cell sk-media-img6 skeleton-shimmer"></div>
+
+      <div class="sk-media-cell sk-media-circle skeleton-shimmer">
+        <div class="sk-line skeleton-shimmer"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.skeleton-wrapper.sk-media-section { padding-block:60px; }
+
+.sk-media-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(3,220px);
+  grid-template-areas:
+    "text  img1 img2 img3"
+    "img4  vid  vid  img5"
+    "img6  vid  vid  circle";
+  gap:24px;
+}
+
+.sk-media-cell { border-radius:16px; position:relative; }
+
+.sk-media-text   { grid-area:text; display:flex; flex-direction:column; justify-content:center; gap:10px; padding:24px; }
+.sk-media-text .sk-line { height:20px; border-radius:4px; }
+.sk-media-text .sk-line:first-child { width:70%; }
+.sk-media-text .sk-line:last-child  { width:85%; }
+
+.sk-media-img1 { grid-area:img1; }
+.sk-media-img2 { grid-area:img2; }
+.sk-media-img3 { grid-area:img3; }
+.sk-media-img4 { grid-area:img4; }
+.sk-media-img5 { grid-area:img5; }
+.sk-media-img6 { grid-area:img6; }
+
+.sk-media-video { grid-area:vid; display:flex; align-items:center; justify-content:center; }
+.sk-play-btn { width:64px; height:64px; border-radius:50%; }
+
+.sk-media-circle { grid-area:circle; border-radius:50%; display:flex; align-items:center; justify-content:center; padding:20px; }
+.sk-media-circle .sk-line { height:16px; width:70%; border-radius:4px; }
+
+@media (max-width: 992px) {
+  .sk-media-grid {
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows:repeat(5,180px);
+    grid-template-areas:
+      "text  img1"
+      "img2  img3"
+      "vid   vid"
+      "img4  img5"
+      "img6  circle";
+  }
+}
+
+@media (max-width: 480px) {
+  .sk-media-grid {
+    grid-template-columns:1fr;
+    grid-template-rows:repeat(9,220px);
+    grid-template-areas:
+      "text"
+      "img1"
+      "img2"
+      "img3"
+      "vid"
+      "img4"
+      "img5"
+      "img6"
+      "circle";
+  }
+}
+</style>
+
+<style>
+*, :before, :after { box-sizing:border-box; border:none; margin:0; }
+:root { --sk-shimmer-dir:1; }
+[dir="rtl"] { --sk-shimmer-dir:-1; }
+
+.skeleton-wrapper { height:fit-content; padding-block:100px; width:100%; }
+.skeleton-wrapper.sk-full-bg  { background:rgba(229,231,235,0.45); }
+
+.skeleton-container { padding-inline:20px; margin-inline:auto; width:100%; max-width:1180px; }
+
+.skeleton-shimmer { position:relative; overflow:hidden; background:#e5e7eb; }
+.skeleton-shimmer::after {
+  content:""; position:absolute; inset:0;
+  transform:translateX(calc(-100% * var(--sk-shimmer-dir)));
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),transparent);
+  animation:skeleton-shimmer-animation 1.5s infinite;
+}
+@keyframes skeleton-shimmer-animation {
+  100% { transform:translateX(calc(100% * var(--sk-shimmer-dir))); }
+}
+</style>

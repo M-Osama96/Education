@@ -1,0 +1,196 @@
+<section class="skeleton-wrapper sk-hero sk-hero-dark">
+  <div class="sk-hero-bg">
+    <div class="sk-hero-shape sk-shape-square-tl skeleton-shimmer"></div>
+    <div class="sk-hero-shape sk-shape-pill-bl skeleton-shimmer"></div>
+    <div class="sk-hero-shape sk-shape-circle-tr skeleton-shimmer"></div>
+    <div class="sk-hero-shape sk-shape-square-br skeleton-shimmer"></div>
+
+    <div class="sk-hero-content">
+      <div class="sk-line sk-hero-title skeleton-shimmer"></div>
+      <div class="sk-line sk-hero-sub skeleton-shimmer"></div>
+      <div class="sk-line sk-hero-sub2 skeleton-shimmer"></div>
+      <div class="sk-hero-btn skeleton-shimmer"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skeleton-wrapper.sk-hero-dark {
+    padding-block: 0;
+    background: #b6b6b6;
+  }
+
+  .sk-hero-dark .sk-hero-bg {
+    width: 100%;
+    min-height: 568px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .sk-hero-dark .skeleton-shimmer {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .sk-hero-dark .skeleton-shimmer::after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+  }
+
+  .sk-hero-shape {
+    position: absolute !important;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .sk-shape-square-tl {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    inset-inline-start: 5%;
+    inset-block-start: 16%;
+    transform: rotate(-10deg);
+  }
+
+  .sk-shape-pill-bl {
+    width: 180px;
+    height: 120px;
+    border-radius: 999px;
+    inset-inline-start: 13%;
+    inset-block-end: 2%;
+  }
+
+  .sk-shape-circle-tr {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    inset-inline-end: 6%;
+    inset-block-start: 8%;
+  }
+
+  .sk-shape-square-br {
+    width: 200px;
+    height: 210px;
+    border-radius: 20px;
+    inset-inline-end: 9%;
+    inset-block-end: 6%;
+    transform: rotate(8deg);
+  }
+
+  .sk-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
+    padding-inline: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .sk-hero-title {
+    height: 1.8em;
+    width: 65%;
+    border-radius: 4px;
+  }
+  .sk-hero-sub {
+    height: 14px;
+    width: 85%;
+    border-radius: 4px;
+  }
+  .sk-hero-sub2 {
+    height: 14px;
+    width: 55%;
+    border-radius: 4px;
+  }
+  .sk-hero-btn {
+    height: 48px;
+    width: 140px;
+    border-radius: 999px;
+    margin-block-start: 12px;
+  }
+
+  @media (max-width: 992px) {
+    .sk-shape-square-tl,
+    .sk-shape-pill-bl,
+    .sk-shape-circle-tr,
+    .sk-shape-square-br {
+      display: none;
+    }
+    .sk-hero-dark .sk-hero-bg {
+      min-height: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sk-hero-title {
+      width: 85%;
+    }
+    .sk-hero-btn {
+      width: 120px;
+    }
+  }
+</style>
+
+<style>
+  *,
+  :before,
+  :after {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+  }
+  :root {
+    --sk-shimmer-dir: 1;
+  }
+  [dir="rtl"] {
+    --sk-shimmer-dir: -1;
+  }
+
+  .skeleton-wrapper {
+    height: fit-content;
+    padding-block: 100px;
+    width: 100%;
+  }
+  .skeleton-wrapper.sk-full-bg {
+    background: rgba(229, 231, 235, 0.45);
+  }
+  .skeleton-wrapper.sk-hero {
+    padding-block: 0;
+  }
+
+  .skeleton-container {
+    padding-inline: 20px;
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1180px;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #e5e7eb;
+  }
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(calc(-100% * var(--sk-shimmer-dir)));
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    animation: skeleton-shimmer-animation 1.5s infinite;
+  }
+  @keyframes skeleton-shimmer-animation {
+    100% {
+      transform: translateX(calc(100% * var(--sk-shimmer-dir)));
+    }
+  }
+</style>

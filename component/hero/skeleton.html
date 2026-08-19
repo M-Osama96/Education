@@ -1,0 +1,280 @@
+<section class="hero">
+  <div class="hero-bg skeleton-shimmer"></div>
+
+  <div class="hero-content">
+    <div class="sk-hero-title skeleton-shimmer"></div>
+    <div class="sk-hero-title w-75 skeleton-shimmer"></div>
+
+    <div class="sk-hero-button skeleton-shimmer"></div>
+  </div>
+
+  <div class="sk-pagination">
+    <div class="sk-page active skeleton-shimmer"></div>
+    <div class="sk-page skeleton-shimmer"></div>
+    <div class="sk-page skeleton-shimmer"></div>
+    <div class="sk-page skeleton-shimmer"></div>
+  </div>
+</section>
+<style>
+  .hero {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+
+    background: #eeeeee;
+  }
+
+  /* =========================
+   Skeleton Base
+========================= */
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+
+    background: #cfcfcf;
+  }
+
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    transform: translateX(-100%);
+
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 100%
+    );
+
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+
+  @keyframes skeleton-shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* =========================
+   Hero Background
+========================= */
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+
+    background: #d0d0d0;
+  }
+
+  /* =========================
+   Content Box
+========================= */
+
+  .hero-content {
+    position: absolute;
+
+    left: 10.5%;
+    right: 10.5%;
+    bottom: 90px;
+
+    min-height: 295px;
+
+    padding: 48px 44px;
+
+    border: 1px solid #eeeeee;
+    border-radius: 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* =========================
+   Title
+========================= */
+
+  .sk-hero-title {
+    width: 62%;
+    height: 46px;
+
+    margin-bottom: 18px;
+
+    border-radius: 6px;
+  }
+
+  .sk-hero-title.w-75 {
+    width: 72%;
+  }
+
+  /* =========================
+   Circular Button
+========================= */
+
+  .sk-hero-button {
+    position: absolute;
+
+    right: 42px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 175px;
+    height: 175px;
+
+    border-radius: 50%;
+  }
+
+  /* =========================
+   Pagination
+========================= */
+
+  .sk-pagination {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 360px;
+    height: 62px;
+
+    padding: 25px 55px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    background: #eeeeee;
+
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+
+  .sk-page {
+    width: 40px;
+    height: 9px;
+
+    border-radius: 10px;
+  }
+
+  .sk-page.active {
+    width: 82px;
+  }
+
+  /* =========================
+   Responsive
+========================= */
+
+  @media (max-width: 992px) {
+    .hero {
+      min-height: 700px;
+    }
+
+    .hero-content {
+      left: 5%;
+      right: 5%;
+      bottom: 80px;
+
+      padding: 35px;
+
+      border-radius: 40px;
+    }
+
+    .sk-hero-title {
+      width: 70%;
+    }
+
+    .sk-hero-title.w-75 {
+      width: 65%;
+    }
+
+    .sk-hero-button {
+      width: 130px;
+      height: 130px;
+
+      right: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 600px;
+    }
+
+    .hero-content {
+      left: 20px;
+      right: 20px;
+      bottom: 70px;
+
+      min-height: 220px;
+
+      padding: 30px;
+
+      border-radius: 30px;
+    }
+
+    .sk-hero-title {
+      width: 65%;
+      height: 32px;
+    }
+
+    .sk-hero-title.w-75 {
+      width: 55%;
+    }
+
+    .sk-hero-button {
+      width: 90px;
+      height: 90px;
+
+      right: 20px;
+    }
+
+    .sk-pagination {
+      width: 260px;
+      height: 50px;
+
+      padding-top: 18px;
+    }
+
+    .sk-page {
+      width: 25px;
+      height: 7px;
+    }
+
+    .sk-page.active {
+      width: 55px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 550px;
+    }
+
+    .hero-content {
+      min-height: 180px;
+
+      padding: 25px;
+    }
+
+    .sk-hero-title {
+      width: 75%;
+    }
+
+    .sk-hero-title.w-75 {
+      width: 60%;
+    }
+
+    .sk-hero-button {
+      width: 65px;
+      height: 65px;
+
+      right: 15px;
+    }
+  }
+</style>

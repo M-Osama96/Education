@@ -1,0 +1,248 @@
+<header class="sk-header">
+  <div class="sk-header-left">
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+  </div>
+
+  <div class="sk-logo">
+    <div class="sk-logo-image skeleton-shimmer"></div>
+  </div>
+
+  <div class="sk-header-right">
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+    <div class="sk-nav-item skeleton-shimmer"></div>
+
+    <div class="sk-language skeleton-shimmer"></div>
+    <div class="sk-icon skeleton-shimmer"></div>
+
+    <div class="sk-button skeleton-shimmer"></div>
+  </div>
+</header>
+<style>
+  .sk-header {
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 44px;
+
+    background: #eeeeee;
+
+    position: relative;
+  }
+
+  /* =========================
+   Skeleton Base
+========================= */
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+
+    background: #d2d2d2;
+  }
+
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    transform: translateX(-100%);
+
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 100%
+    );
+
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+
+  @keyframes skeleton-shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* =========================
+   Left Navigation
+========================= */
+
+  .sk-header-left,
+  .sk-header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .sk-nav-item {
+    width: 80px;
+    height: 18px;
+
+    border-radius: 4px;
+  }
+
+  .sk-header-left .sk-nav-item:nth-child(2) {
+    width: 125px;
+  }
+
+  .sk-header-left .sk-nav-item:nth-child(3) {
+    width: 65px;
+  }
+
+  .sk-header-left .sk-nav-item:nth-child(4) {
+    width: 65px;
+  }
+
+  .sk-header-left .sk-nav-item:nth-child(5) {
+    width: 80px;
+  }
+
+  .sk-header-left .sk-nav-item:nth-child(6) {
+    width: 115px;
+  }
+
+  /* =========================
+   Center Logo
+========================= */
+
+  .sk-logo {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    width: 300px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    clip-path: polygon(8% 0, 92% 0, 84% 100%, 16% 100%);
+  }
+
+  .sk-logo-image {
+    width: 108px;
+    height: 72px;
+
+    border-radius: 0;
+  }
+
+  /* =========================
+   Right Navigation
+========================= */
+
+  .sk-header-right .sk-nav-item:nth-child(1) {
+    width: 135px;
+  }
+
+  .sk-header-right .sk-nav-item:nth-child(2) {
+    width: 65px;
+  }
+
+  .sk-header-right .sk-nav-item:nth-child(3) {
+    width: 70px;
+  }
+
+  .sk-language {
+    width: 30px;
+    height: 18px;
+
+    border-radius: 4px;
+  }
+
+  .sk-icon {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+  }
+
+  .sk-button {
+    width: 145px;
+    height: 50px;
+
+    border-radius: 28px;
+  }
+
+  /* =========================
+   Responsive
+========================= */
+
+  @media (max-width: 1200px) {
+    .sk-header {
+      padding: 0 25px;
+    }
+
+    .sk-header-left,
+    .sk-header-right {
+      gap: 14px;
+    }
+
+    .sk-logo {
+      width: 240px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .sk-header-left .sk-nav-item:nth-child(n + 5),
+    .sk-header-right .sk-nav-item:nth-child(n + 3) {
+      display: none;
+    }
+
+    .sk-logo {
+      width: 200px;
+    }
+
+    .sk-button {
+      width: 120px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sk-header {
+      height: 80px;
+      padding: 0 20px;
+    }
+
+    .sk-header-left {
+      display: none;
+    }
+
+    .sk-header-right .sk-nav-item {
+      display: none;
+    }
+
+    .sk-logo {
+      position: static;
+
+      transform: none;
+
+      width: 150px;
+      height: 65px;
+    }
+
+    .sk-logo-image {
+      width: 75px;
+      height: 50px;
+    }
+
+    .sk-button {
+      width: 100px;
+      height: 42px;
+    }
+  }
+</style>

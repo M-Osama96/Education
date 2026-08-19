@@ -1,0 +1,209 @@
+<section class="advantages skeleton-section">
+  <div class="advantages-header">
+    <div class="skeleton skeleton-title"></div>
+
+    <div class="skeleton skeleton-text"></div>
+    <div class="skeleton skeleton-text skeleton-text-sm"></div>
+  </div>
+
+  <div class="advantages-grid">
+    <!-- Card -->
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <!-- Repeat -->
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+
+    <div class="advantage-card">
+      <div class="skeleton skeleton-icon"></div>
+      <div class="skeleton skeleton-card-title"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text"></div>
+      <div class="skeleton skeleton-card-text short"></div>
+    </div>
+  </div>
+</section>
+<style>
+  .skeleton-section {
+    background: #b6b6b6;
+    padding: 70px 10%;
+  }
+
+  /* Header */
+
+  .advantages-header {
+    width: 526px;
+    min-height: 235px;
+    margin: 0 auto 90px;
+    padding: 55px 60px 40px;
+
+    background: #fff;
+    border-radius: 0 0 50px 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .skeleton-title {
+    width: 70%;
+    height: 35px;
+    border-radius: 6px;
+  }
+
+  .skeleton-text {
+    width: 85%;
+    height: 15px;
+    border-radius: 5px;
+  }
+
+  .skeleton-text-sm {
+    width: 70%;
+  }
+
+  /* Grid */
+
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 58px 20px;
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  /* Card */
+
+  .advantage-card {
+    position: relative;
+
+    min-height: 205px;
+    padding: 48px 25px 25px;
+
+    border-radius: 15px;
+    background: rgba(228, 228, 228, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Icon */
+
+  .skeleton-icon {
+    position: absolute;
+    top: -37px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+  }
+
+  /* Card title */
+
+  .skeleton-card-title {
+    width: 85%;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  /* Card text */
+
+  .skeleton-card-text {
+    width: 90%;
+    height: 14px;
+    border-radius: 5px;
+  }
+
+  .skeleton-card-text.short {
+    width: 65%;
+  }
+
+  /* Skeleton */
+
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08) 25%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.08) 75%
+    );
+
+    background-size: 200% 100%;
+
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+
+  .advantages-header .skeleton {
+    background: linear-gradient(90deg, #e8e8e8 25%, #f7f7f7 50%, #e8e8e8 75%);
+
+    background-size: 200% 100%;
+  }
+
+  @keyframes skeleton-shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
+  }
+</style>

@@ -1,0 +1,129 @@
+.media-four {
+  padding: 70px 0;
+  @include sm {
+    padding: 40px 0;
+  }
+  .media-four-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include md {
+      gap: 12px;
+    }
+    @include sm {
+      gap: 8px;
+    }
+    @include xs {
+    }
+    .media-img {
+      width: calc(37.5% - 15px);
+      aspect-ratio: 410/200;
+      border: 2px solid #ffffff;
+      @include xs {
+        width: calc(50% - 4px);
+        aspect-ratio: 270/200;
+      }
+    }
+    .media-btn-cont {
+      width: calc(24% - 0px);
+      aspect-ratio: 270/200;
+      @include flexCenter;
+      @include xs {
+        width: calc(50% - 4px);
+      }
+    }
+    //   .div2 {
+    //     grid-column: span 2 / span 2;
+    //   }
+
+    //   .div3 {
+    //     grid-column: span 2 / span 2;
+    //     grid-column-start: 4;
+    //   }
+
+    //   .div4 {
+    //     grid-column: span 2 / span 2;
+    //     grid-row-start: 2;
+    //   }
+
+    //   .div5 {
+    //     grid-column: span 2 / span 2;
+    //     grid-column-start: 3;
+    //     grid-row-start: 2;
+    //   }
+
+    //   .div6 {
+    //     grid-column-start: 5;
+    //     grid-row-start: 2;
+    //   }
+  }
+}
+.sq-img {
+  //   aspect-ratio: 270/200;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px 0px #00000014;
+  display: block;
+  @include xs {
+    border-radius: 8px;
+  }
+  .img-cover {
+    display: flex;
+  }
+  .media-four & {
+    width: 100%;
+    height: 100%;
+  }
+}
+.media-btn {
+  @include flexCenter;
+  background-color: $setting_primary_color;
+  @include fontStyle(22px, $weight_semibold, #fff);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 0 34px;
+  @include md {
+    padding: 20px;
+  }
+  @include sm {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .media-four & {
+    max-width: 155px;
+    font-size: 17px;
+    padding: 0;
+    width: 100%;
+    border: 2.18px solid #ffffff;
+    @include sm {
+      max-width: 120px;
+    }
+  }
+}
+.media-text {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    darken($setting_primary_color, $amount: 5%) 0%,
+    darken($setting_primary_color, $amount: 25%) 100%
+  );
+  @include fontStyle(40px, $weight_bold, #fff);
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 0 25px;
+  box-shadow: 0px 4px 12px 0px #00000014;
+  @include sm {
+    font-size: 20px;
+  }
+  .media-four & {
+    width: calc(24% - 0px);
+    aspect-ratio: 270/200;
+    @include xs {
+      width: calc(50% - 4px);
+      border-radius: 8px;
+    }
+  }
+}
